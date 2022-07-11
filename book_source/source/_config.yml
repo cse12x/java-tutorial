@@ -1,8 +1,8 @@
 #######################################################################################
 # Book settings
-title: "Intermediate Data Programming"
+title: "Java Tutorial"
 author: "Hunter Schafer"
-copyright: "2021"
+copyright: "2022"
 logo: _static/logo.png
 
 #######################################################################################
@@ -25,12 +25,12 @@ html:
   use_repository_button: true
   use_issues_button: true
   # Kind of a hack, but I have to hardcode the GitHub URL to get this to work :(
-  extra_navbar: '<a href="https://cse163.github.io/book/acknowledgements.html">Acknowledgements</a><br/>Powered by <a href="https://jupyterbook.org">Jupyter Book</a>'
-  extra_footer: 'Have feedback or spotted a bug? Please make a <a href="https://github.com/cse163/book/issues">GitHub issue</a> or contact <a href="https://homes.cs.washington.edu/~hschafer/">Hunter Schafer</a>!'
+  extra_navbar: '<a href="https://cse12x.github.io/java-tutorail/acknowledgements.html">Acknowledgements</a><br/>Powered by <a href="https://jupyterbook.org">Jupyter Book</a>'
+  extra_footer: 'Have feedback or spotted a bug? Please make a <a href="https://github.com/cse12x/java-tutorial/issues">GitHub issue</a> or contact <a href="https://homes.cs.washington.edu/~hschafer/">Hunter Schafer</a>!'
 
   comments:
     utterances:
-      repo: "cse163/book"
+      repo: "cse12x/java-tutorail"
       issue-term: "pathname"
       label: "💬 Comments"
       theme: "preferred-color-scheme"
@@ -43,7 +43,7 @@ launch_buttons:
   colab_url: https://colab.research.google.com/
 
 repository:
-  url: https://github.com/cse163/book
+  url: https://github.com/cse12x/java-tutorial
   path_to_book: book_source/source/
   branch: main
 
@@ -54,9 +54,6 @@ sphinx:
     - "sphinx_comments"
     - "sphinx_copybutton"
     - "sphinx_design"
-  local_extensions:
-    "custom_directives": "ext/"
-    "setup_templating": "ext/"
   config:
     suppress_warnings:
       - "myst.header"
