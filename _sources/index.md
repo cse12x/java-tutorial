@@ -2,4 +2,4 @@
 
 Welcome! 🎉
 
-This is the Java tutorial! Very much a draft, but there is a dummy table of contents to the right
+This is the Java tutorial! Very much a draft, but there is a dummy table of contents to the right!
