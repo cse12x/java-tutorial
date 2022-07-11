@@ -1,21 +1,18 @@
 # CSE 163: Intermediate Data Programming (Public)
 
-[![Jupyter Book Badge](https://jupyterbook.org/badge.svg)](https://cse163.github.io/book/)
+[![Jupyter Book Badge](https://jupyterbook.org/badge.svg)](https://cse12x.github.io/java-tutorial/)
 
 Author: [Hunter Schafer](https://homes.cs.washington.edu/~hschafer/)
 
-Contributors: Wen Qiu, Mitchell Estberg, Ryan Siu, Rit Shah, Apollo Zhu, Soham Pardeshi for proofreading and adding practice problems. Wen Qiu helped edit the lessons to this publicly accessible website.
-
-This repository stores the source files for the public-facing resources for our UW course, CSE 163: Intermediate Data Programming.
+This repository maintains the source code for our Java Tutorial. This tutorial is designed for students who already have programming experience
+in some text-based language (e.g., Python) but have not yet experienced Java.
 
 ## Note on Repo Structure
-
-Much of this book was originally written in a learning tool used in our course called EdStem. EdStem allows for interactivity with code in both the readings and practice problems, which this public version is not able to provide. Since the repo that stores the original EdStem files also contains assignment solutions, we assume the directory of raw EdStem files lives outside of this repo in order to generate a new version of the site. The `scripts/generate_pages.py` script is really only necessary for our initial translation, and won't be likely used again. We leave it though for reference.
 
 ## Feedback or Spot a Bug?
 
 If you have any feedback about the book text or structure, or you spot a bug somewhere in the book, please let us know! The best way to contact us
-is to make an [GitHub Issue](https://github.com/cse163/book/issues) or to contact [Hunter Schafer](https://homes.cs.washington.edu/~hschafer/) directly.
+is to make an [GitHub Issue](https://github.com/cse12x/java-tutorial/issues) or to contact [Hunter Schafer](https://homes.cs.washington.edu/~hschafer/) directly.
 
 ## Contributing
 
@@ -26,8 +23,8 @@ This book is built with the [Sphinx Book Theme](https://sphinx-book-theme.readth
 Create a virtual environment with Python 3.8 or higher. For example, if you use Anaconda you can write:
 
 ```bash
-conda create --name 163-book python=3.8
-conda activate 163-book
+conda create --name 12x-java-tutorial python=3.8
+conda activate 12x-java-tutorial
 ```
 
 Install the book theme dependencies. All of these are libraries used for themes/templating in the book. `Sphinx` is the documentation templating tool, `sphinx-book-theme` is the specific book theme, `myst-nb` changes the Sphinx langauge from rST to MyST (more similar to Markdown), and `sphinx-thebe` allows interactive notebooks in the browser.
@@ -45,19 +42,6 @@ Edit the book text by editing the appropriate MyST file. See [MyST's documentati
 The practice problem starter code and tests live in `book_source/coding_problems`.
 
 ### Rebuilding the book
-
-#### Step 1) Update starter code zips [optional, if changing starter code]
-
-**If you changed starter code or tests for the practice problems, you will need to do this step first, otherwise skip to the next step** The code in `book_source/coding_problems` needs to be copied to appropriate `.zip` file in the book source. To do this, run the following Python script.
-
-```bash
-python scripts/generate_pages.py
-
-# Or
-make zips
-```
-
-#### Step 2) Build HTML output
 
 Build the new book HTML by running:
 
