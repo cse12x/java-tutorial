@@ -3,4 +3,5 @@ root: index
 chapters:
   - file: printing
   - file: variables_expressions
+  - file: if_statements
   - file: loops
