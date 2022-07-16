@@ -5,3 +5,4 @@ chapters:
   - file: variables_expressions
   - file: if_statements
   - file: loops
+  - file: strings
