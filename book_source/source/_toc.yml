@@ -6,3 +6,4 @@ chapters:
   - file: if_statements
   - file: loops
   - file: strings
+  - file: methods
