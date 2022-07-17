@@ -88,7 +88,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/favicon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Java Tutorial" href="variables.html" />
+    <link rel="next" title="Strings" href="strings.html" />
+    <link rel="prev" title="If/Else Statements" href="if_statements.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -144,16 +145,30 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="index.html">
-                    <i class="fas fa-hand-sparkles fa-fw"></i> Welcome and Introduction
+                    <i class="fas fa-hand-sparkles fa-fw"></i> Introduction and Hello World!
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="variables.html">
+  <a class="reference internal" href="printing.html">
    <i class="fas fa-book fa-fw">
    </i>
-   Java Tutorial
+   Printing and Comments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="variables_expressions.html">
+   <i class="fas fa-book fa-fw">
+   </i>
+   Variables, Types, Expressions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="if_statements.html">
+   <i class="fas fa-book fa-fw">
+   </i>
+   If/Else Statements
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -161,6 +176,27 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-book fa-fw">
    </i>
    Loops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="strings.html">
+   <i class="fas fa-book fa-fw">
+   </i>
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="methods.html">
+   <i class="fas fa-book fa-fw">
+   </i>
+   Methods
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="io_files.html">
+   <i class="fas fa-book fa-fw">
+   </i>
+   Files and I/O
   </a>
  </li>
 </ul>
@@ -335,12 +371,53 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#while-loops">
+   While Loops
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#for-loop">
+   For Loop
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#short-update-syntax">
+     Short Update Syntax
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scope">
+   Scope
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -352,6 +429,36 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#while-loops">
+   While Loops
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#for-loop">
+   For Loop
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#short-update-syntax">
+     Short Update Syntax
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scope">
+   Scope
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -361,35 +468,111 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="i-class-fas-fa-book-fa-fw-i-loops">
 <h1><i class="fas fa-book fa-fw"></i> Loops<a class="headerlink" href="#i-class-fas-fa-book-fa-fw-i-loops" title="Permalink to this headline">#</a></h1>
-<p>This is a loop</p>
+<section id="while-loops">
+<h2>While Loops<a class="headerlink" href="#while-loops" title="Permalink to this headline">#</a></h2>
+<p>Just like most languages, Java has a notion of a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop that runs multiple times while some condition is true. The syntax is similar to most other languages, with the normal Java requirements that we saw from if statements to have parentheses around the conditions and using curly brackets to indicate the start/stop of the loop body.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="e0d6983b-35a3-44fb-9ae2-ec1a1f0776aa" name="60b2ed86-cfe4-46c8-b93a-14e1bf9290b2" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="e0d6983b-35a3-44fb-9ae2-ec1a1f0776aa">
+<input checked="checked" id="9d69d10c-422f-4894-963c-fc1a108a6d20" name="e369bb5e-d59c-4f0c-a066-3c56a2b33259" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="9d69d10c-422f-4894-963c-fc1a108a6d20">
 JAVA</label><div class="sd-tab-content docutils">
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;After loop&quot;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<input id="613a6915-385a-4582-8467-2831eae6bd26" name="e369bb5e-d59c-4f0c-a066-3c56a2b33259" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="613a6915-385a-4582-8467-2831eae6bd26">
+PYTHON</label><div class="sd-tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">n</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;After loop&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The semantics of the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop are consistent across most languages: it repeatedly evaluates the condition and each time, if the condition is true, runs the body of the loop and stops once the condition is evaluated to false.</p>
+</section>
+<section id="for-loop">
+<h2>For Loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">#</a></h2>
+<p>While the syntax for while loops is fairly consistent across languages, <code class="docutils literal notranslate"><span class="pre">for</span></code> loops generally have quite different syntax across languages. We will first show the syntax to print the numbers between 0 and 10 in Java, and then will explain all of parts of the syntax.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="973033e1-47e8-46cc-a413-374fe56c7629" name="b6feee01-9af7-4f08-801d-e2a0cb1113b2" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="973033e1-47e8-46cc-a413-374fe56c7629">
+JAVA</label><div class="sd-tab-content docutils">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">11</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
-<input id="fd78dd57-a20b-44bc-8742-0c65be6cfd3d" name="60b2ed86-cfe4-46c8-b93a-14e1bf9290b2" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="fd78dd57-a20b-44bc-8742-0c65be6cfd3d">
+<input id="18dbbb23-151e-4683-a106-a7a8141075ad" name="b6feee01-9af7-4f08-801d-e2a0cb1113b2" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="18dbbb23-151e-4683-a106-a7a8141075ad">
 PYTHON</label><div class="sd-tab-content docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<input id="654d55f2-fa48-4369-b1c5-2d2040401aaf" name="60b2ed86-cfe4-46c8-b93a-14e1bf9290b2" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-javascript" for="654d55f2-fa48-4369-b1c5-2d2040401aaf">
-JAVASCRIPT</label><div class="sd-tab-content docutils">
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span><span class="w"></span>
+</div>
+<p>The for loop in Java is fairly complex in that you have to specify a lot of things! The general format of the for loop in Java is the following:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>for (initialization; condition; update) {
+    body;
+}
+</pre></div>
+</div>
+<p>So from the example above, the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop runs the following steps (in order)</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">initialization</span></code>: <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">i</span> <span class="pre">=</span> <span class="pre">0</span></code> this sets up a loop variable called <code class="docutils literal notranslate"><span class="pre">i</span></code> to start at 0</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">condition</span></code>: <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">&lt;</span> <span class="pre">11</span></code> this is the condition in which the for loop will continue to run. Think of this like the while loop condition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">body</span></code>: <code class="docutils literal notranslate"><span class="pre">System.out.println(i)</span></code> is the body of the loop that will run once for each iteration of the loop.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">update</span></code>: <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">=</span> <span class="pre">i</span> <span class="pre">+</span> <span class="pre">1</span></code> is run to update the loop variable.</p></li>
+<li><p>Repeat steps 2, 3, and 4 until the condition becomes false when we check step 3, in which case the loop stops.</p></li>
+</ol>
+<section id="short-update-syntax">
+<h3>Short Update Syntax<a class="headerlink" href="#short-update-syntax" title="Permalink to this headline">#</a></h3>
+<p>It is quite tedious to write out <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">=</span> <span class="pre">i</span> <span class="pre">+</span> <span class="pre">1</span></code> every time you write a for loop, so Java provides two shorthand syntaxes to do the same thing. The following are essentially equivalent for almost all programming tasks.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">=</span> <span class="pre">i</span> <span class="pre">+</span> <span class="pre">1;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">+=</span> <span class="pre">1;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">i++;</span></code></p></li>
+</ul>
+<p>Similarly, there are operators for subtracting by 1 with</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">=</span> <span class="pre">i</span> <span class="pre">-</span> <span class="pre">1;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">-=</span> <span class="pre">1;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">i--;</span></code></p></li>
+</ul>
+<p>So this means we would write the loop above as:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">11</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
+</section>
+</section>
+<section id="scope">
+<h2>Scope<a class="headerlink" href="#scope" title="Permalink to this headline">#</a></h2>
+<p>An important notion in Java is the concept of a variable’s <strong>scope</strong>. A variable is only defined in a certain part of the program, and we call this part of the program the variable’s scope. In Java, scope is fairly simple in that a variable is only defined after its declaration until the next set of a closing curly bracket. The following code snippet demonstrates the concept of the variable <code class="docutils literal notranslate"><span class="pre">n</span></code> by showing where it is valid to reference it and where you can’t. In the context of programming, we call trying to use a variable that is not defined in your current scope using something “out of scope”.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w">  </span><span class="c1">// Out of scope: Not defined yet</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="c1">// Out of scope: Not defined yet</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w">  </span><span class="c1">// n is now defined and its scope is the for loop body</span><span class="w"></span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w">  </span><span class="c1">// n is in scope</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w">  </span><span class="c1">// Out of scope: No longer defined</span><span class="w"></span>
+</pre></div>
 </div>
-</div>
+<p>Note how the variable <code class="docutils literal notranslate"><span class="pre">n</span></code> is only defined after its declaration but only until the body of the for loop continues. Outside of the loop, <code class="docutils literal notranslate"><span class="pre">n</span></code> can no longer be referenced since it is out of scope.</p>
+<p>One variable to not in particular is the loop variable <code class="docutils literal notranslate"><span class="pre">i</span></code> in the example above. <code class="docutils literal notranslate"><span class="pre">i</span></code>’s scope is limited to the for loop body and the for loop “header” (the initialization, condition, and update). This means you can refer to <code class="docutils literal notranslate"><span class="pre">i</span></code> in any of those parts, but not outside the loop.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -419,12 +602,19 @@ JAVASCRIPT</label><div class="sd-tab-content docutils">
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="variables.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="if_statements.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><i class="fas fa-book fa-fw"></i> Java Tutorial</p>
+            <p class="prev-next-title"><i class="fas fa-book fa-fw"></i> If/Else Statements</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="strings.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><i class="fas fa-book fa-fw"></i> Strings</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>

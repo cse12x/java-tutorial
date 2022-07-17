@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Java Tutorial &#8212; Java Tutorial</title>
+    <title>Methods &#8212; Java Tutorial</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -88,8 +88,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/favicon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Loops" href="loops.html" />
-    <link rel="prev" title="Welcome and Introduction" href="index.html" />
+    <link rel="next" title="Files and I/O" href="io_files.html" />
+    <link rel="prev" title="Strings" href="strings.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -145,16 +145,30 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="index.html">
-                    <i class="fas fa-hand-sparkles fa-fw"></i> Welcome and Introduction
+                    <i class="fas fa-hand-sparkles fa-fw"></i> Introduction and Hello World!
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="printing.html">
    <i class="fas fa-book fa-fw">
    </i>
-   Java Tutorial
+   Printing and Comments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="variables_expressions.html">
+   <i class="fas fa-book fa-fw">
+   </i>
+   Variables, Types, Expressions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="if_statements.html">
+   <i class="fas fa-book fa-fw">
+   </i>
+   If/Else Statements
   </a>
  </li>
  <li class="toctree-l1">
@@ -162,6 +176,27 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-book fa-fw">
    </i>
    Loops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="strings.html">
+   <i class="fas fa-book fa-fw">
+   </i>
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   <i class="fas fa-book fa-fw">
+   </i>
+   Methods
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="io_files.html">
+   <i class="fas fa-book fa-fw">
+   </i>
+   Files and I/O
   </a>
  </li>
 </ul>
@@ -254,7 +289,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/cse12x/java-tutorial/issues/new?title=Issue%20on%20page%20%2Fvariables.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/cse12x/java-tutorial/issues/new?title=Issue%20on%20page%20%2Fmethods.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -271,7 +306,7 @@ title="Open an issue"
       </li>
       
       <li>
-        <a href="https://github.com/cse12x/java-tutorial/edit/main/book_source/source/variables.md"
+        <a href="https://github.com/cse12x/java-tutorial/edit/main/book_source/source/methods.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -299,7 +334,7 @@ title="Edit this page"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/variables.md"
+        <a href="_sources/methods.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -348,7 +383,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1><i class="fas fa-book fa-fw"></i> Java Tutorial</h1>
+                <h1><i class="fas fa-book fa-fw"></i> Methods</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -360,31 +395,93 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="i-class-fas-fa-book-fa-fw-i-java-tutorial">
-<h1><i class="fas fa-book fa-fw"></i> Java Tutorial<a class="headerlink" href="#i-class-fas-fa-book-fa-fw-i-java-tutorial" title="Permalink to this headline">#</a></h1>
-<p>These are variables</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="i-class-fas-fa-book-fa-fw-i-methods">
+<h1><i class="fas fa-book fa-fw"></i> Methods<a class="headerlink" href="#i-class-fas-fa-book-fa-fw-i-methods" title="Permalink to this headline">#</a></h1>
+<p>Methods allow you to define reusable bundles of code that can help reduce redundancy and organize your code for readability. The concept of methods, or also called functions in other languages, are the same in Java but the syntax looks a little bit different.</p>
+<p>Like before, we will start by showing the syntax and then will explain the components.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="7813f376-e145-41a9-8f66-57a55a1d7332" name="2ae83586-7c6c-4fca-ada7-364aeca42a2a" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="7813f376-e145-41a9-8f66-57a55a1d7332">
+<input checked="checked" id="aebec596-185e-4b17-8231-0d8ce42daceb" name="13ec8843-efcf-4d0a-8822-0259b83e89fc" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="aebec596-185e-4b17-8231-0d8ce42daceb">
 JAVA</label><div class="sd-tab-content docutils">
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Example</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The main method starts&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">greetings</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Seattle&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">message</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The main method ends&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">greetings</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">times</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">greetingTo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Greetings starts&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">times</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">greetingTo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;!&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Greetings ends&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Greeted &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">times</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; times&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
-<input id="78242a68-7b4f-42b8-b98a-44396e1b3c47" name="2ae83586-7c6c-4fca-ada7-364aeca42a2a" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="78242a68-7b4f-42b8-b98a-44396e1b3c47">
+<input id="9454d3a5-fc79-48bd-88af-9e1c9b8e656d" name="13ec8843-efcf-4d0a-8822-0259b83e89fc" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="9454d3a5-fc79-48bd-88af-9e1c9b8e656d">
 PYTHON</label><div class="sd-tab-content docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The main method starts&quot;</span><span class="p">)</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="n">greetings</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;Seattle&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The main method ends&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">greetings</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">greeting_to</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Greetings starts&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">times</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello &quot;</span> <span class="o">+</span> <span class="n">greeting_to</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Greeting ends&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s2">&quot;Greeted &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">times</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; times&quot;</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
-<input id="850a8e65-81ed-4525-85dc-157adc749ec7" name="2ae83586-7c6c-4fca-ada7-364aeca42a2a" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-javascript" for="850a8e65-81ed-4525-85dc-157adc749ec7">
-JAVASCRIPT</label><div class="sd-tab-content docutils">
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="w"></span>
+</div>
+<p>This code has the output:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>The main method starts
+Greetings starts
+Hello Seattle!
+Hello Seattle!
+Hello Seattle!
+Hello Seattle!
+Greetings ends
+Greeted 4 times
+The main method ends
 </pre></div>
 </div>
+<p>In general, the syntax for defining a method in Java is the following:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>public static ReturnType methodName(ParameterType1 parameterName1,
+                                    ParameterType2 parameterType2, ...) {
+    code;
+    code;
+    code;
+    return value;
+}
+</pre></div>
 </div>
+<p>Note that we generally will define methods starting with <code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">static</span></code> as part of the Java syntax. Like with control structures such as while loops, we use curly brackets to indicate what lines of code belong inside the method.</p>
+<p>The scoping rules that Java uses apply here. This means variables defined inside methods will only be available in that method. This is what we can use <strong>return</strong>s to return a single value from a method to the method that called it. If a method does not need to return a value it doesn’t need to, but then the return type should be declared a special value <code class="docutils literal notranslate"><span class="pre">void</span></code> such as</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">method</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+</pre></div>
+</div>
+<div class="admonition-note admonition">
+<p class="admonition-title">Note</p>
+<p>Now that we have seen the general syntax, we can now see that the <code class="docutils literal notranslate"><span class="pre">main</span></code> method shown earlier is just that, a method. Java just requires this method
+has this particular method name and parameter so it can call it to run the program.</p>
+</div>
+<p>To call a method in Java, you use parentheses after the method name and passing an parameters inside the parens.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ReturnType variableName = methodName(value1, value2);
+</pre></div>
 </div>
 </section>
 
@@ -415,17 +512,17 @@ JAVASCRIPT</label><div class="sd-tab-content docutils">
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="strings.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><i class="fas fa-hand-sparkles fa-fw"></i> Welcome and Introduction</p>
+            <p class="prev-next-title"><i class="fas fa-book fa-fw"></i> Strings</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="loops.html" title="next page">
+    <a class='right-next' id="next-link" href="io_files.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><i class="fas fa-book fa-fw"></i> Loops</p>
+        <p class="prev-next-title"><i class="fas fa-book fa-fw"></i> Files and I/O</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
