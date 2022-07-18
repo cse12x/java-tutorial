@@ -29,6 +29,12 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
+```{code-block} javascript
+// Contents of hello_world.js
+
+console.log("Hello World!")
+```
 ````
 
 In Java, we print by interacting with `System.out` which represents the output console (i.e., the screen). `println` is a method that stands for "print line". The `println` method prints a line of text based on the parameter you give it. You can print as many lines as you want by calling the method multiple times.
@@ -49,6 +55,14 @@ public class Printing {
 print("Hello World!")
 print("Hello Seattle!")
 print("Hello UW!")
+```
+
+```{code-block} javascript
+// Contents of hello_world.js
+
+console.log("Hello World!")
+console.log("Hello Seattle!")
+console.log("Hello UW!")
 ```
 ````
 
@@ -81,6 +95,16 @@ print("Hello World!", end="")
 print("Hello Seattle!", end="")
 print("Hello UW!", end="")
 ```
+
+```{code-block} javascript
+// Javascript doesn't have a native command to print without including a new-line at the end.
+// However, we can emulate this in node.js
+
+process.stdout.write("Hello World!")
+process.stdout.write("Hello Seattle!")
+process.stdout.write("Hello UW!")
+```
+
 ````
 
 ```text
@@ -103,8 +127,17 @@ public class Printing {
 
 ```{code-block} python
 print("Hello World!", end=" ")
-print("Hello Seattle! ", end="")
+print("Hello Seattle! ", end=" ")
 print("Hello UW!", end="")
+```
+
+```{code-block} javascript
+// Javascript doesn't have a native command to print without including a new-line at the end.
+// However, we can emulate this in node.js
+
+process.stdout.write("Hello World! ")
+process.stdout.write("Hello Seattle! ")
+process.stdout.write("Hello UW! ")
 ```
 ````
 
@@ -134,6 +167,18 @@ print("A")
 print("B", end="")
 print("B")
 print("C")
+```
+
+```{code-block} javascript
+// Javascript doesn't have a native command to print without including a new-line at the end.
+// However, we can emulate this in node.js
+
+process.stdout.write("A")
+process.stdout.write("A")
+console.log("A")
+process.stdout.write("B")
+console.log("B")
+console.log("C")
 ```
 ````
 
@@ -179,6 +224,18 @@ that spans multiple
 lines
 """
 print("Second")
+```
+
+```{code-block} javascript
+// This is a single-line comment
+console.log("First")
+/*
+This is
+a comment
+that spans multiple
+lines
+*/
+console.log("Second")
 ```
 ````
 
