@@ -5,6 +5,3 @@ html:
 
 clean:
 	jupyter-book clean "$(SRC_DIR)"
-
-zips:
-	python scripts/generate_pages.py
