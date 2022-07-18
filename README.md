@@ -1,4 +1,4 @@
-# CSE 163: Intermediate Data Programming (Public)
+# CSE 122: CSE 122 Java Tutorial
 
 [![Jupyter Book Badge](https://jupyterbook.org/badge.svg)](https://cse12x.github.io/java-tutorial/)
 
@@ -6,8 +6,6 @@ Author: [Hunter Schafer](https://homes.cs.washington.edu/~hschafer/)
 
 This repository maintains the source code for our Java Tutorial. This tutorial is designed for students who already have programming experience
 in some text-based language (e.g., Python) but have not yet experienced Java.
-
-## Note on Repo Structure
 
 ## Feedback or Spot a Bug?
 
@@ -20,10 +18,10 @@ This book is built with the [Sphinx Book Theme](https://sphinx-book-theme.readth
 
 ### Setup
 
-Create a virtual environment with Python 3.8 or higher. For example, if you use Anaconda you can write:
+Create a virtual environment with Python 3.9 or higher. For example, if you use Anaconda you can write:
 
 ```bash
-conda create --name 12x-java-tutorial python=3.8
+conda create --name 12x-java-tutorial python=3.9
 conda activate 12x-java-tutorial
 ```
 
