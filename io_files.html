@@ -465,8 +465,8 @@ the sea shore
 <h2>Reading From a File<a class="headerlink" href="#reading-from-a-file" title="Permalink to this headline">#</a></h2>
 <p>To read from a file in Java, we use a <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> object that controls how to read the file. A <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> keeps track of where we are in the file and how to read the next parts bit by bit. The following code snippet shows how to to create a Scanner and read the file each “token” at a time. A <em>token</em> is a series of characters separated by whitespace. It is the same idea as the concept of a “word”, but more general since there are many non-words that are stored in computer files such as numbers.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="7bb77ad1-8089-490d-aa02-1b7afd52e1be" name="8fdfb36d-125c-4bc6-95ab-f0994dd7378a" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="7bb77ad1-8089-490d-aa02-1b7afd52e1be">
+<input checked="checked" id="de63326d-bc47-4a56-a849-22d10a2b9c78" name="cda7d770-cfa5-46d3-8fa8-3a0881194d2f" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="de63326d-bc47-4a56-a849-22d10a2b9c78">
 JAVA</label><div class="sd-tab-content docutils">
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">FileReading</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -481,8 +481,8 @@ JAVA</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="5f2aeffb-4884-4e48-8fdb-9dcb19c202c6" name="8fdfb36d-125c-4bc6-95ab-f0994dd7378a" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="5f2aeffb-4884-4e48-8fdb-9dcb19c202c6">
+<input id="2248bc34-ebac-4657-89e2-324a8706c56b" name="cda7d770-cfa5-46d3-8fa8-3a0881194d2f" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="2248bc34-ebac-4657-89e2-324a8706c56b">
 PYTHON</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;poem.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -526,8 +526,8 @@ shore
 </div>
 <p>The following code snippet shows how to do this in Java. Note that instead of calling the <code class="docutils literal notranslate"><span class="pre">next()</span></code> and <code class="docutils literal notranslate"><span class="pre">hasNext()</span></code> method, we are calling the <code class="docutils literal notranslate"><span class="pre">nextLine()</span></code> and <code class="docutils literal notranslate"><span class="pre">hasNextLine()</span></code>. These methods behave similarly, but instead of returning a single token returns the whole line of text. We then can actually use another <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> made from this line to read just that line token by token! This is a common pattern for mixing line-based processing and token-based processing.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="a303d7c7-d816-49c8-b288-d4ae4202fd07" name="8b0a95ef-e750-4872-91ba-911b96b7ecb2" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="a303d7c7-d816-49c8-b288-d4ae4202fd07">
+<input checked="checked" id="32efe9df-9163-4fe8-a73e-094fadf0c622" name="837507c3-6643-43cb-9b69-10697d226d6d" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="32efe9df-9163-4fe8-a73e-094fadf0c622">
 JAVA</label><div class="sd-tab-content docutils">
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">FileReading</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -558,8 +558,8 @@ JAVA</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="e8d82909-f513-4480-8902-3fb2128c54b4" name="8b0a95ef-e750-4872-91ba-911b96b7ecb2" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="e8d82909-f513-4480-8902-3fb2128c54b4">
+<input id="51b76f06-6f66-4f61-b8d5-ae017189d235" name="837507c3-6643-43cb-9b69-10697d226d6d" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="51b76f06-6f66-4f61-b8d5-ae017189d235">
 PYTHON</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="n">line_num</span> <span class="o">=</span> <span class="mi">1</span>
@@ -588,8 +588,8 @@ PYTHON</label><div class="sd-tab-content docutils">
 <h2>User Input<a class="headerlink" href="#user-input" title="Permalink to this headline">#</a></h2>
 <p>Often, we also want to be able to interact with the user and ask them for input by having them type into the keyboard. It turns out that the <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> was designed for this purpose to since user input is just another data source! We can make a new <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> instance, but instead of attaching it to a file or a <code class="docutils literal notranslate"><span class="pre">String</span></code>, we can attach it to a special source for the user’s keyboard called <code class="docutils literal notranslate"><span class="pre">System.in</span></code>. The following program asks the user for their name and age and prints a greeting. When we run this program, every time we call one of the <code class="docutils literal notranslate"><span class="pre">next</span></code> methods it will pause, and wait for the user to type in the requested info.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="843ac13a-a9e6-4de2-b24c-720c7a890844" name="91f3ec26-7c6c-4d00-8e1d-69cffb641fa6" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="843ac13a-a9e6-4de2-b24c-720c7a890844">
+<input checked="checked" id="2a2f1c07-b369-4069-b6ab-66e6f6770c5f" name="b0f192e1-ca85-48e4-8f34-6652db6963b1" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="2a2f1c07-b369-4069-b6ab-66e6f6770c5f">
 JAVA</label><div class="sd-tab-content docutils">
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UserInput</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -607,8 +607,8 @@ JAVA</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="74a1ec7b-2379-4348-bf92-7d255126d565" name="91f3ec26-7c6c-4d00-8e1d-69cffb641fa6" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="74a1ec7b-2379-4348-bf92-7d255126d565">
+<input id="9f106f22-7037-4728-9ce2-bf9829f8d6bc" name="b0f192e1-ca85-48e4-8f34-6652db6963b1" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="9f106f22-7037-4728-9ce2-bf9829f8d6bc">
 PYTHON</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your name? &quot;</span><span class="p">)</span>
