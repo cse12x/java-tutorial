@@ -54,14 +54,10 @@ console.log("Hello World!");
 // Contents of hello_world.c
 
 #include <stdio.h>
-
-int main()
+void main()
 {
-    printf("Hello World");
-
-    return 0;
+    printf("Hello World!\n");
 }
-
 ```
 
 ````

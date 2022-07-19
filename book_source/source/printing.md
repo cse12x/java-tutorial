@@ -35,6 +35,16 @@ if __name__ == "__main__":
 
 console.log("Hello World!");
 ```
+
+```{code-block} c
+// Contents of hello_world.c
+
+#include <stdio.h>
+void main()
+{
+    printf("Hello World!\n");
+}
+```
 ````
 
 In Java, we print by interacting with `System.out` which represents the output console (i.e., the screen). `println` is a method that stands for "print line". The `println` method prints a line of text based on the parameter you give it. You can print as many lines as you want by calling the method multiple times.
@@ -63,6 +73,16 @@ print("Hello UW!")
 console.log("Hello World!");
 console.log("Hello Seattle!");
 console.log("Hello UW!");
+```
+
+```{code-block} c
+#include <stdio.h>
+void main()
+{
+    printf("Hello World!\n");
+    printf("Hello Seattle!\n");
+    printf("Hello UW!\n");
+}
 ```
 ````
 
@@ -105,6 +125,15 @@ process.stdout.write("Hello Seattle!");
 process.stdout.write("Hello UW!");
 ```
 
+```{code-block} c
+#include <stdio.h>
+void main()
+{
+    printf("Hello World!");
+    printf("Hello Seattle!");
+    printf("Hello UW!");
+}
+```
 ````
 
 ```text
@@ -138,6 +167,16 @@ print("Hello UW!", end="")
 process.stdout.write("Hello World! ");
 process.stdout.write("Hello Seattle! ");
 process.stdout.write("Hello UW! ");
+```
+
+```{code-block} c
+#include <stdio.h>
+void main()
+{
+    printf("Hello World! ");
+    printf("Hello Seattle! ");
+    printf("Hello UW! ");
+}
 ```
 ````
 
@@ -179,6 +218,19 @@ console.log("A");
 process.stdout.write("B");
 console.log("B");
 console.log("C");
+```
+
+```{code-block} c
+#include <stdio.h>
+void main()
+{
+    printf("A");
+    printf("A");
+    printf("A\n");
+    printf("B");
+    printf("B\n");
+    printf("C\n");
+}
 ```
 ````
 
@@ -236,6 +288,22 @@ that spans multiple
 lines
 */
 console.log("Second");
+```
+
+```{code-block} c
+#include <stdio.h>
+void main()
+{
+    // This is a single-line comment
+    printf("First\n");
+    /*
+    This is
+    a comment
+    that spans multiple
+    lines
+    */
+    printf("Second\n");
+}
 ```
 ````
 
