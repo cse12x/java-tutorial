@@ -52,6 +52,17 @@ printf("%d\n", x <= y);  // Less than or equal to
 printf("%d\n", x > y);   // Greater than
 printf("%d\n", x >= y);  // Greater than or equal to
 ```
+
+```{code-block} c++
+int x = 4;
+int y = 5;
+cout << (x == y) << endl;  // Equal
+cout << (x != y) << endl;  // Not equal
+cout << (x < y) << endl;   // Less than
+cout << (x <= y) << endl;  // Less than or equal to
+cout << (x > y) << endl;   // Greater than
+cout << (x >= y) << endl;  // Greater than or equal to
+```
 ````
 
 ## Boolean Operators
@@ -95,6 +106,14 @@ int b2 = 0;
 int b3 = b1 && b2;
 int b4 = b3 || !b2;
 int b5 = b3 == b4;
+```
+
+```{code-block} c++
+bool b1 = true;
+bool b2 = false;
+bool b3 = b1 && b2;
+bool b4 = b3 || !b2;
+bool b5 = b3 == b4;
 ```
 ````
 
@@ -165,6 +184,18 @@ if (n % 3 == 0) {
     printf("Case 2\n");
 }
 printf("After if/else\n");
+```
+
+```{code-block} c++
+int n = 4;
+if (n % 3 == 0) {
+    cout << "Case 0" << endl;
+} else if (n % 3 == 1 || n % 2 == 0) {
+    cout << "Case 1" << endl;
+} else {
+    cout << "Case 2" << endl;
+}
+cout << "After if/else" << endl;
 ```
 ````
 

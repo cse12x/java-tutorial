@@ -88,6 +88,29 @@ void main()
 }
 ```
 
+```{code-block} c++
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    string token;
+    ifstream file("poem.txt");
+    while ( getline(file, token) ) 
+    {
+        istringstream line(token);
+        while (line >> token)
+        {
+            cout << token << endl;
+        }
+    }
+
+  return 0;
+}
+```
 ````
 
 This code yield the following output.
@@ -228,6 +251,38 @@ void main()
     fclose( input_file );
 }
 ```
+
+```{code-block} c++
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    string token;
+    ifstream file("poem.txt");
+    int line_num = 1;
+
+    while ( getline(file, token) ) 
+    {
+        istringstream line(token);
+        int token_count = 0;
+        while (line >> token)
+        {
+            token_count++;
+        }
+
+        cout << line_num << ": " << endl;
+        cout << token_count << endl;
+
+        line_num++;
+    }
+
+  return 0;
+}
+```
 ````
 
 The beauty of a `Scanner` is it hides all of the logic of figuring out what source of data it is attached to, how to fetch the next thing or tell if there is more data present. All we need to do as programmers is make a new `Scanner` instance and call the methods we want!
@@ -293,6 +348,28 @@ void main()
     
     printf("Welcome %s ", name);
     printf("(%d)!", age);
+}
+```
+
+```{code-block} c++
+#include <iostream>
+
+using namespace std;
+
+int main() 
+{
+    string name;
+    int age;
+
+    cout << "What is your name? ";
+    cin >> name;
+
+    cout << "What is your age? ";
+    cin >> age;
+
+    cout << "Welcome" << name << "(" << age << ")!" << endl;
+
+    return 0;
 }
 ```
 ````
