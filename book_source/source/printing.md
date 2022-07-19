@@ -46,6 +46,20 @@ void main()
     printf("Hello World!\n");
 }
 ```
+
+```{code-block} c++
+// Contents of hello_world.cpp
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Hello World!" << endl;
+    return 0;
+}
+```
 ````
 
 In Java, we print by interacting with `System.out` which represents the output console (i.e., the screen). `println` is a method that stands for "print line". The `println` method prints a line of text based on the parameter you give it. You can print as many lines as you want by calling the method multiple times.
@@ -84,6 +98,20 @@ void main()
     printf("Hello World!\n");
     printf("Hello Seattle!\n");
     printf("Hello UW!\n");
+}
+```
+
+```{code-block} c++
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Hello World!" << endl;
+    cout << "Hello Seattle!" << endl;
+    cout << "Hello UW!" << endl;
+    return 0;
 }
 ```
 ````
@@ -137,6 +165,18 @@ void main()
     printf("Hello UW!");
 }
 ```
+
+```{code-block} c++
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Hello World!" << "Hello Seattle!" << "Hello UW!";
+    return 0;
+}
+```
 ````
 
 ```text
@@ -180,6 +220,18 @@ void main()
     printf("Hello World! ");
     printf("Hello Seattle! ");
     printf("Hello UW! ");
+}
+```
+
+```{code-block} c++
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Hello World! " << "Hello Seattle! " << "Hello UW! ";
+    return 0;
 }
 ```
 ````
@@ -235,6 +287,24 @@ void main()
     printf("B");
     printf("B\n");
     printf("C\n");
+}
+```
+
+```{code-block} c++
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "A";
+    cout << "A";
+    cout << "A" << endl;
+    cout << "B";
+    cout << "B" << endl;
+    cout << "C" << endl;
+
+    return 0;
 }
 ```
 ````
@@ -309,6 +379,27 @@ void main()
     lines
     */
     printf("Second\n");
+}
+```
+
+```{code-block} c++
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    // This is a single-line comment
+    cout << "First" << endl;
+    /*
+    This is
+    a comment
+    that spans multiple
+    lines
+    */
+    cout << "Second" << endl;
+
+    return 0;
 }
 ```
 ````
