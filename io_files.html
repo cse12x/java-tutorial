@@ -473,8 +473,8 @@ the sea shore
 <h2>Reading From a File<a class="headerlink" href="#reading-from-a-file" title="Permalink to this headline">#</a></h2>
 <p>To read from a file in Java, we use a <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> object that controls how to read the file. A <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> keeps track of where we are in the file and how to read the next parts bit by bit. The following code snippet shows how to to create a Scanner and read the file each “token” at a time. A <em>token</em> is a series of characters separated by whitespace. It is the same idea as the concept of a “word”, but more general since there are many non-words that are stored in computer files such as numbers.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="281b889c-648d-4aca-b46f-511821e3bf0f" name="283384e8-291c-4d0f-a445-85d9f02ba330" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="281b889c-648d-4aca-b46f-511821e3bf0f">
+<input checked="checked" id="b13f69f3-d718-4e80-80e5-277278b727cc" name="6f15cea8-5e06-477e-9632-e51dcacb4d36" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="b13f69f3-d718-4e80-80e5-277278b727cc">
 JAVA</label><div class="sd-tab-content docutils">
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">FileReading</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -489,8 +489,8 @@ JAVA</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="18a7e3ae-dd7d-42f9-ba7b-4711e79941f8" name="283384e8-291c-4d0f-a445-85d9f02ba330" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="18a7e3ae-dd7d-42f9-ba7b-4711e79941f8">
+<input id="fb5233c6-1491-46ab-80a6-bc11fe35f704" name="6f15cea8-5e06-477e-9632-e51dcacb4d36" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="fb5233c6-1491-46ab-80a6-bc11fe35f704">
 PYTHON</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;poem.txt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -505,8 +505,8 @@ PYTHON</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="98c522c8-af4e-4b0b-b695-3271873e662e" name="283384e8-291c-4d0f-a445-85d9f02ba330" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-javascript" for="98c522c8-af4e-4b0b-b695-3271873e662e">
+<input id="ce47a70e-d999-4c72-b7f9-f94e2fea167a" name="6f15cea8-5e06-477e-9632-e51dcacb4d36" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-javascript" for="ce47a70e-d999-4c72-b7f9-f94e2fea167a">
 JAVASCRIPT</label><div class="sd-tab-content docutils">
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// File I/O is not allowed natively on Javascript</span><span class="w"></span>
 <span class="c1">// The following code is written for node.js</span><span class="w"></span>
@@ -524,6 +524,34 @@ JAVASCRIPT</label><div class="sd-tab-content docutils">
 <span class="p">}</span><span class="w"></span>
 
 <span class="nx">main</span><span class="p">()</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<input id="18f674bb-0380-485b-a126-48030b523f2f" name="6f15cea8-5e06-477e-9632-e51dcacb4d36" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-c" for="18f674bb-0380-485b-a126-48030b523f2f">
+C</label><div class="sd-tab-content docutils">
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">delimiter_characters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;poem.txt&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">FILE</span><span class="w"> </span><span class="o">*</span><span class="n">input_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fopen</span><span class="p">(</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;r&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">buffer</span><span class="p">[</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">last_token</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="w"> </span><span class="n">fgets</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="mi">1024</span><span class="p">,</span><span class="w"> </span><span class="n">input_file</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">){</span><span class="w"></span>
+<span class="w">        </span><span class="n">last_token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strtok</span><span class="p">(</span><span class="w"> </span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="n">delimiter_characters</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="w"> </span><span class="n">last_token</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">){</span><span class="w"></span>
+<span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">last_token</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="n">last_token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strtok</span><span class="p">(</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">delimiter_characters</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">fclose</span><span class="p">(</span><span class="w"> </span><span class="n">input_file</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -556,8 +584,8 @@ shore
 </div>
 <p>The following code snippet shows how to do this in Java. Note that instead of calling the <code class="docutils literal notranslate"><span class="pre">next()</span></code> and <code class="docutils literal notranslate"><span class="pre">hasNext()</span></code> method, we are calling the <code class="docutils literal notranslate"><span class="pre">nextLine()</span></code> and <code class="docutils literal notranslate"><span class="pre">hasNextLine()</span></code>. These methods behave similarly, but instead of returning a single token returns the whole line of text. We then can actually use another <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> made from this line to read just that line token by token! This is a common pattern for mixing line-based processing and token-based processing.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="fa1de200-8348-415d-a59c-8522292b421a" name="60e6ced2-6da5-4f1f-8076-1d5e6b70bd7f" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="fa1de200-8348-415d-a59c-8522292b421a">
+<input checked="checked" id="b132372e-1805-4c4f-9233-94752db6a151" name="3c78564a-cb7c-4f6d-9b2b-e3292a647617" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="b132372e-1805-4c4f-9233-94752db6a151">
 JAVA</label><div class="sd-tab-content docutils">
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">FileReading</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -588,8 +616,8 @@ JAVA</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="ed2fc70a-2bb8-4fa8-bae7-f642e715080e" name="60e6ced2-6da5-4f1f-8076-1d5e6b70bd7f" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="ed2fc70a-2bb8-4fa8-bae7-f642e715080e">
+<input id="cf87d503-f9f2-4c50-b3b5-01c8baf4321b" name="3c78564a-cb7c-4f6d-9b2b-e3292a647617" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="cf87d503-f9f2-4c50-b3b5-01c8baf4321b">
 PYTHON</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="n">line_num</span> <span class="o">=</span> <span class="mi">1</span>
@@ -611,8 +639,8 @@ PYTHON</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="dc0c99e5-ecd8-44d6-9c5f-5554278512bf" name="60e6ced2-6da5-4f1f-8076-1d5e6b70bd7f" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-javascript" for="dc0c99e5-ecd8-44d6-9c5f-5554278512bf">
+<input id="ac93819a-5820-4a5f-b6c0-66ab884cb25f" name="3c78564a-cb7c-4f6d-9b2b-e3292a647617" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-javascript" for="ac93819a-5820-4a5f-b6c0-66ab884cb25f">
 JAVASCRIPT</label><div class="sd-tab-content docutils">
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// File I/O is not allowed natively on Javascript</span><span class="w"></span>
 <span class="c1">// The following code is written for node.js</span><span class="w"></span>
@@ -637,6 +665,40 @@ JAVASCRIPT</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
+<input id="b7fbfef9-1b2e-42c9-b509-1715591ae1ea" name="3c78564a-cb7c-4f6d-9b2b-e3292a647617" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-c" for="b7fbfef9-1b2e-42c9-b509-1715591ae1ea">
+C</label><div class="sd-tab-content docutils">
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">delimiter_characters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;poem.txt&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">FILE</span><span class="w"> </span><span class="o">*</span><span class="n">input_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fopen</span><span class="p">(</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;r&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">buffer</span><span class="p">[</span><span class="w"> </span><span class="mi">1024</span><span class="w"> </span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">last_token</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">line_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">fgets</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="mi">1024</span><span class="p">,</span><span class="w"> </span><span class="n">input_file</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">last_token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strtok</span><span class="p">(</span><span class="w"> </span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="n">delimiter_characters</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">token_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">last_token</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">token_count</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">            </span><span class="n">last_token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strtok</span><span class="p">(</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">delimiter_characters</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d: &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">line_num</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">token_count</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">line_num</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">fclose</span><span class="p">(</span><span class="w"> </span><span class="n">input_file</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
 </div>
 <p>The beauty of a <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> is it hides all of the logic of figuring out what source of data it is attached to, how to fetch the next thing or tell if there is more data present. All we need to do as programmers is make a new <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> instance and call the methods we want!</p>
 </section>
@@ -644,8 +706,8 @@ JAVASCRIPT</label><div class="sd-tab-content docutils">
 <h2>User Input<a class="headerlink" href="#user-input" title="Permalink to this headline">#</a></h2>
 <p>Often, we also want to be able to interact with the user and ask them for input by having them type into the keyboard. It turns out that the <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> was designed for this purpose to since user input is just another data source! We can make a new <code class="docutils literal notranslate"><span class="pre">Scanner</span></code> instance, but instead of attaching it to a file or a <code class="docutils literal notranslate"><span class="pre">String</span></code>, we can attach it to a special source for the user’s keyboard called <code class="docutils literal notranslate"><span class="pre">System.in</span></code>. The following program asks the user for their name and age and prints a greeting. When we run this program, every time we call one of the <code class="docutils literal notranslate"><span class="pre">next</span></code> methods it will pause, and wait for the user to type in the requested info.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="604d31fe-d23c-4a8f-94d0-e5f62ab82af2" name="fbbbd214-fa49-46c7-8863-fc86a48f62d5" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="604d31fe-d23c-4a8f-94d0-e5f62ab82af2">
+<input checked="checked" id="2f537ae4-d076-42ec-a15f-8d1bfef71763" name="a02d360c-2e48-4034-8745-ca1bed78b6fb" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="2f537ae4-d076-42ec-a15f-8d1bfef71763">
 JAVA</label><div class="sd-tab-content docutils">
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UserInput</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -663,8 +725,8 @@ JAVA</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="8a938261-d4fa-4721-839a-082e82dd0050" name="fbbbd214-fa49-46c7-8863-fc86a48f62d5" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="8a938261-d4fa-4721-839a-082e82dd0050">
+<input id="1f5c305c-1c39-4395-bddc-ccb7e454d94f" name="a02d360c-2e48-4034-8745-ca1bed78b6fb" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="1f5c305c-1c39-4395-bddc-ccb7e454d94f">
 PYTHON</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your name? &quot;</span><span class="p">)</span>
@@ -678,8 +740,8 @@ PYTHON</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="ee3024da-2aac-4e42-9142-85a66c9feb0d" name="fbbbd214-fa49-46c7-8863-fc86a48f62d5" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-javascript" for="ee3024da-2aac-4e42-9142-85a66c9feb0d">
+<input id="4788e1d8-a853-4a83-889e-667945477781" name="a02d360c-2e48-4034-8745-ca1bed78b6fb" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-javascript" for="4788e1d8-a853-4a83-889e-667945477781">
 JAVASCRIPT</label><div class="sd-tab-content docutils">
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;What is your name? &quot;</span><span class="p">);</span><span class="w"></span>
@@ -689,6 +751,28 @@ JAVASCRIPT</label><div class="sd-tab-content docutils">
 <span class="p">}</span><span class="w"></span>
 
 <span class="nx">main</span><span class="p">()</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<input id="6af1b8fa-9da9-418b-80ce-aef41372853c" name="a02d360c-2e48-4034-8745-ca1bed78b6fb" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-c" for="6af1b8fa-9da9-418b-80ce-aef41372853c">
+C</label><div class="sd-tab-content docutils">
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">name</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;What is your name? &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;What is your age? &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">age</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Welcome %s &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;(%d)!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>

@@ -65,6 +65,42 @@ function greetings(times, greetingTo) {
 
 main();
 ```
+
+```{code-block} c
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <stdlib.h>
+
+char *greetings(int times, char *greetingTo) {
+    printf("Greetings starts\n");
+
+    for (int i = 0; i < times; i++) {
+        printf("Hello ");
+        printf("%s", greetingTo);
+        printf("!\n");
+    }
+    printf("Greetings ends\n");
+
+    char *retGreeted = (char *) malloc(1024);
+    char times_str[20];
+    snprintf(times_str, "%d", times);
+    
+    strcpy(retGreeted, "Greeted ");
+    strcat(retGreeted, times_str);
+    strcat(retGreeted, " times");
+    return retGreeted;
+}
+
+void main() {
+    printf("The main method starts\n");
+    char *message;
+    message = greetings(4, "Seattle");
+    printf("%s\n", message);
+    free(message);
+    printf("The main method ends\n");
+}
+```
 ````
 
 This code has the output:

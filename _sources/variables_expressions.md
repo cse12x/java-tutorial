@@ -29,6 +29,18 @@ let y = 5;
 console.log(x);
 console.log(y);
 ```
+
+```{code-block} c
+#include <stdio.h>
+
+void main()
+{
+    int x = 4;
+    int y = 6;
+    printf("%d\n", x);
+    printf("%d\n", y);
+}
+```
 ````
 
 ```text
@@ -66,6 +78,18 @@ let x = 4;
 console.log(x);
 x = 7;
 console.log(x);
+```
+
+```{code-block} c
+#include <stdio.h>
+
+void main()
+{
+    int x = 4;
+    printf("%d\n", x);
+    x = 7;
+    printf("%d\n", x);
+}
 ```
 ````
 
@@ -117,6 +141,19 @@ let c = true;
 let d = "a";
 let e = "Hello";
 ```
+
+```{code-block} c
+#include <stdio.h>
+
+void main()
+{
+    int a = 5;
+    double b = 4.5;
+    int c = 1; // c doesn't have a boolean type
+    char d = 'a';
+    char *e = "Hello";
+}
+```
 ````
 
 Once a variable has a defined type, you cannot change the type of that variable. Java is also very strict when it comes to types. By saying `x` is of type `int`, you can only store integers in that variable. For example, the following code would cause a type error.
@@ -162,6 +199,18 @@ let z = 4.5;
 console.log(x + z - Math.floor(x / y));
 // Note that / in Java does integer division (no need for Math.floor)
 ```
+
+```{code-block} c
+#include <stdio.h>
+
+void main()
+{
+    int x = 5;
+    int y = 3;
+    double z = 4.5;
+    printf("%f\n", x + z - x / y);
+}
+```
 ````
 
 The output of this code is 8.5, which you may or may not have expected! One thing to note is that division between integers uses a special rule for **integer division**. When `x` is 5 and `y` is 3, `x / y` evaluates to 1 since 3 only goes into 5 one time evenly! You have to pay particular attention to when you are doing division to make sure if integer division is appropriate or not. If you do division involving a `double`, then "normal division" will be used.
@@ -189,6 +238,18 @@ y = x ** 2
 ```{code-block} javascript
 let x = 3;
 let y = x ** 2;
+```
+
+```{code-block} c
+#include <stdio.h>
+#include <math.h>
+
+void main()
+{
+    int x = 3;
+    int y = pow(x, 2);
+    printf("%d\n", y);
+}
 ```
 ````
 
@@ -228,6 +289,20 @@ print(d)  # Prints 3
 ```{code-block} javascript
 // JavaScript only has a Number type that stores floating point / doubles values
 // There is no distinction between integers and doubles, and no way to convert between them
+```
+
+```{code-block} c
+#include <stdio.h>
+
+void main()
+{
+    int a = 5;
+    double b = 3.5;
+    double c = (double) a;
+    int d = (int) b;
+    printf("%f\n", c);  // Prints 5.0
+    printf("%d\n", d);  // Prints 3
+}
 ```
 ````
 
