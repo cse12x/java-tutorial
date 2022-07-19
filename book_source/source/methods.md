@@ -101,6 +101,42 @@ void main() {
     printf("The main method ends\n");
 }
 ```
+
+```{code-block} c++
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+char *greetings(int times, string greetingTo) {
+    cout << "Greetings starts" << endl;
+
+    for (int i = 0; i < times; i++) {
+        cout << "Hello " << greetingTo << "!" << endl;
+    }
+    
+    cout << "Greetings ends" << endl;
+
+    char *retGreeted = (char *) malloc(1024);
+    char times_str[20];
+    sprintf(times_str, "%d", times);
+    
+    strcpy(retGreeted, "Greeted ");
+    strcat(retGreeted, times_str);
+    strcat(retGreeted, " times");
+    return retGreeted;
+}
+
+int main() {
+    cout << "The main method starts" << endl;
+    char *message;
+    message = greetings(4, "Seattle");
+    cout << message << endl;
+    free(message);
+    cout << "The main method ends" << endl;
+    
+    return 0;
+}
 ````
 
 This code has the output:

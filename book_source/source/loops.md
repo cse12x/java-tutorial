@@ -45,6 +45,16 @@ while (n < 100) {
 
 printf("After loop\n");
 ```
+
+```{code-block} c++
+int n = 1;
+while (n < 100) {
+    cout << n << endl;
+    n = 2 * n;
+}
+
+cout << "After loop" << endl;
+```
 ````
 
 The semantics of the `while` loop are consistent across most languages: it repeatedly evaluates the condition and each time, if the condition is true, runs the body of the loop and stops once the condition is evaluated to false.
@@ -74,6 +84,12 @@ for (let i = 0; i < 11; i = i + 1) {
 ```{code-block} c
 for (int i = 0; i < 11; i = i + 1) {
     printf("%d\n", i);
+}
+```
+
+```{code-block} c++
+for (int i = 0; i < 11; i = i + 1) {
+    cout << i << endl;
 }
 ```
 ````

@@ -54,6 +54,21 @@ for (int i = 0; i < 4; i++) {
 }
 printf("%d]\n", array[4]);
 ```
+
+```{code-block} c++
+int array[5];
+array[0] = 1;
+array[1] = 14;
+array[2] = 0; // in C++, you need to explictly 0 initialize memory
+array[3] = array[1];
+array[4] = 5;
+
+cout << "[";
+for (int i = 0; i < 4; i++) {
+    cout << array[i] << ", ";
+}
+cout << array[4] << "]" << endl;
+```
 ````
 
 The syntax of assigning or getting a value inside an array is much like using a variable, but we add a `[x]` at the end to indicate we want to use index `x`. So on the left-hand of the `=` for assignment we are assigning *into* the variable at that index, and on the right side we are *getting* the value at that index.
@@ -100,6 +115,16 @@ for (let i = 0; i < array.length; i++) {
 ```
 
 ```{code-block} c
+int array[5];
+// Code to fill array with some values
+
+int sum = 0;
+for (int i = 0; i < array.length; i++) {
+    sum += array[i];
+}
+```
+
+```{code-block} c++
 int array[5];
 // Code to fill array with some values
 
@@ -162,6 +187,23 @@ function shift(numbers) {
 ```
 
 ```{code-block} c
+void shift(int numbers[]) {
+    if (numbers.length > 0) {
+        // Save the first number for later
+        int firstNumber = numbers[0];
+
+        // Shift every number forward one index
+        for (int i = 0; i < numbers.length - 1; i++) {
+            numbers[i] = numbers[i + 1];
+        }
+
+        // Store the old first number at the last spot
+        numbers[numbers.length - 1] = firstNumber;
+    }
+}
+```
+
+```{code-block} c++
 void shift(int numbers[]) {
     if (numbers.length > 0) {
         // Save the first number for later

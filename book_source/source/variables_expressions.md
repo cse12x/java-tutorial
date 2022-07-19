@@ -41,6 +41,22 @@ void main()
     printf("%d\n", y);
 }
 ```
+
+```{code-block} c++
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int x = 4;
+    int y = 6;
+    cout << x << endl;
+    cout << y << endl;
+
+    return 0;
+}
+```
 ````
 
 ```text
@@ -89,6 +105,22 @@ void main()
     printf("%d\n", x);
     x = 7;
     printf("%d\n", x);
+}
+```
+
+```{code-block} c++
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int x = 4;
+    cout << x << endl;
+    x = 7;
+    cout << x << endl;
+
+    return 0;
 }
 ```
 ````
@@ -154,6 +186,21 @@ void main()
     char *e = "Hello";
 }
 ```
+
+```{code-block} c++
+#include <iostream>
+
+int main()
+{
+    int a = 5;
+    double b = 4.5;
+    bool c = true;
+    char d = 'a';
+    string e = "Hello";
+
+    return 0;
+}
+```
 ````
 
 Once a variable has a defined type, you cannot change the type of that variable. Java is also very strict when it comes to types. By saying `x` is of type `int`, you can only store integers in that variable. For example, the following code would cause a type error.
@@ -211,6 +258,20 @@ void main()
     printf("%f\n", x + z - x / y);
 }
 ```
+
+```{code-block} c++
+#include <iostream>
+
+int main()
+{
+    int x = 5;
+    int y = 3;
+    double z = 4.5;
+    cout << x + z - x / y << endl;
+
+    return 0;
+}
+```
 ````
 
 The output of this code is 8.5, which you may or may not have expected! One thing to note is that division between integers uses a special rule for **integer division**. When `x` is 5 and `y` is 3, `x / y` evaluates to 1 since 3 only goes into 5 one time evenly! You have to pay particular attention to when you are doing division to make sure if integer division is appropriate or not. If you do division involving a `double`, then "normal division" will be used.
@@ -249,6 +310,22 @@ void main()
     int x = 3;
     int y = pow(x, 2);
     printf("%d\n", y);
+}
+```
+
+```{code-block} c++
+#include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int x = 3;
+    int y = pow(x, 2);
+    cout << y << endl;
+
+    return 0;
 }
 ```
 ````
@@ -302,6 +379,25 @@ void main()
     int d = (int) b;
     printf("%f\n", c);  // Prints 5.0
     printf("%d\n", d);  // Prints 3
+}
+```
+
+```{code-block} c++
+#include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int a = 5;
+    double b = 3.5;
+    double c = static_cast<double>(a);
+    int d = static_cast<int>(b);
+    cout << c << endl;  // Prints 5.0
+    cout << d << endl;  // Prints 3
+
+    return 0;
 }
 ```
 ````

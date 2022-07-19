@@ -54,6 +54,20 @@ printf("%s\n", result);
 // Output:
 // Hello Seattle!
 ```
+
+```{code-block} c++
+#include <iostream>
+
+using namespace std;
+
+string greeting = "Hello";
+string location = "Seattle";
+string result = greeting + " " + location + "!";
+cout << result << endl;
+
+// Output:
+// Hello Seattle!
+```
 ````
 
 In Java, you can also concatenate `String`s with other data types, and they will be converted to `String`s!
@@ -84,6 +98,12 @@ char s2[2];
 strcpy(s2, s1);
 strcat(s2, "4");
 printf("%s\n", s2); // a4
+```
+
+```{code-block} c++
+string s1 = "a";
+string s2 = s1 + "4";
+cout << s2 << endl; // a4
 ```
 ````
 
@@ -160,6 +180,22 @@ s5[3] = '\0';
 
 char c = s1[1];                // 'e'
 int  i = strstr(s1, "l") - s1; // 2
+```
+
+```{code-block} c++
+#include <algorithm>
+#include <string>
+
+string s1 = "Hello";
+
+transform(s1.begin(), s1.end(), s1.begin(), ::toupper);  // "HELLO"
+transform(s1.begin(), s1.end(), s1.begin(), ::tolower);  // "hello"
+
+string s4 = s1.substring(1, 3);  // "ell"
+string s5 = s1.substring(2);     // "llo"
+
+char c = s1.at(1);         // 'e'
+int i = s1.find('l');      // 2
 ```
 ````
 
