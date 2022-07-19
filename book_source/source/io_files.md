@@ -62,6 +62,32 @@ function main() {
 
 main()
 ```
+
+```{code-block} c
+#include <stdio.h>
+#include <string.h>
+
+void main() 
+{
+    const char *delimiter_characters = " ";
+    const char *filename = "poem.txt";
+    FILE *input_file = fopen( filename, "r" );
+    char buffer[ 1024 ];
+    char *last_token;
+
+    while( fgets(buffer, 1024, input_file) != NULL ){
+        last_token = strtok( buffer, delimiter_characters );
+        while( last_token != NULL ){
+            printf( "%s\n", last_token );
+            last_token = strtok( NULL, delimiter_characters );
+        }
+
+    }
+
+    fclose( input_file );
+}
+```
+
 ````
 
 This code yield the following output.
@@ -171,6 +197,37 @@ function main() {
 
 main()
 ```
+
+```{code-block} c
+#include <stdio.h>
+#include <string.h>
+
+void main() 
+{
+    const char *delimiter_characters = " ";
+    const char *filename = "poem.txt";
+    FILE *input_file = fopen( filename, "r" );
+    char buffer[ 1024 ];
+    char *last_token;
+    int line_num = 1;
+
+    while ( fgets(buffer, 1024, input_file) != NULL ) {
+        last_token = strtok( buffer, delimiter_characters );
+        int token_count = 0;
+        while ( last_token != NULL ) {
+            token_count++;
+            last_token = strtok( NULL, delimiter_characters );
+        }
+        
+        printf("%d: ", line_num);
+        printf("%d\n", token_count)
+
+        line_num++;
+    }
+
+    fclose( input_file );
+}
+```
 ````
 
 The beauty of a `Scanner` is it hides all of the logic of figuring out what source of data it is attached to, how to fetch the next thing or tell if there is more data present. All we need to do as programmers is make a new `Scanner` instance and call the methods we want!
@@ -218,6 +275,25 @@ function main() {
 }
 
 main()
+```
+
+```{code-block} c
+#include <stdio.h>
+
+void main()
+{
+    char *name;
+    int age;
+    
+    printf("What is your name? ");
+    scanf("%s", name);
+    
+    printf("What is your age? ");
+    scanf("%d", &age);
+    
+    printf("Welcome %s ", name);
+    printf("(%d)!", age);
+}
 ```
 ````
 

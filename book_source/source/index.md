@@ -54,6 +54,7 @@ console.log("Hello World!");
 // Contents of hello_world.c
 
 #include <stdio.h>
+
 void main()
 {
     printf("Hello World!\n");

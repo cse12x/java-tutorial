@@ -18,7 +18,6 @@ System.out.println(x < y);   // Less than
 System.out.println(x <= y);  // Less than or equal to
 System.out.println(x > y);   // Greater than
 System.out.println(x >= y);  // Greater than or equal to
-
 ```
 
 ```{code-block} python
@@ -41,6 +40,17 @@ console.log(x < y);
 console.log(x <= y);
 console.log(x > y);
 console.log(x >= y);
+```
+
+```{code-block} c
+int x = 4;
+int y = 5;
+printf("%d\n", x == y);  // Equal
+printf("%d\n", x != y);  // Not equal
+printf("%d\n", x < y);   // Less than
+printf("%d\n", x <= y);  // Less than or equal to
+printf("%d\n", x > y);   // Greater than
+printf("%d\n", x >= y);  // Greater than or equal to
 ```
 ````
 
@@ -77,6 +87,14 @@ let b2 = false;
 let b3 = b1 && b2;
 let b4 = b3 || !b2;
 let b5 = b3 === b4;
+```
+
+```{code-block} c
+int b1 = 1;
+int b2 = 0;
+int b3 = b1 && b2;
+int b4 = b3 || !b2;
+int b5 = b3 == b4;
 ```
 ````
 
@@ -135,6 +153,18 @@ if (n % 3 === 0) {
     console.log('Case 2');
 }
 console.log('After if/else');
+```
+
+```{code-block} c
+int n = 4;
+if (n % 3 == 0) {
+    printf("Case 0\n");
+} else if (n % 3 == 1 || n % 2 == 0) {
+    printf("Case 1\n");
+} else {
+    printf("Case 2\n");
+}
+printf("After if/else\n");
 ```
 ````
 

@@ -40,6 +40,7 @@ console.log("Hello World!");
 // Contents of hello_world.c
 
 #include <stdio.h>
+
 void main()
 {
     printf("Hello World!\n");
@@ -77,6 +78,7 @@ console.log("Hello UW!");
 
 ```{code-block} c
 #include <stdio.h>
+
 void main()
 {
     printf("Hello World!\n");
@@ -127,6 +129,7 @@ process.stdout.write("Hello UW!");
 
 ```{code-block} c
 #include <stdio.h>
+
 void main()
 {
     printf("Hello World!");
@@ -171,6 +174,7 @@ process.stdout.write("Hello UW! ");
 
 ```{code-block} c
 #include <stdio.h>
+
 void main()
 {
     printf("Hello World! ");
@@ -222,6 +226,7 @@ console.log("C");
 
 ```{code-block} c
 #include <stdio.h>
+
 void main()
 {
     printf("A");
@@ -292,6 +297,7 @@ console.log("Second");
 
 ```{code-block} c
 #include <stdio.h>
+
 void main()
 {
     // This is a single-line comment

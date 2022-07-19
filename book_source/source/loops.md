@@ -35,6 +35,16 @@ while (n < 100) {
 
 console.log("After loop");
 ```
+
+```{code-block} c
+int n = 1;
+while (n < 100) {
+    printf("%d\n", n);
+    n = 2 * n;
+}
+
+printf("After loop\n");
+```
 ````
 
 The semantics of the `while` loop are consistent across most languages: it repeatedly evaluates the condition and each time, if the condition is true, runs the body of the loop and stops once the condition is evaluated to false.
@@ -58,6 +68,12 @@ for i in range(11):
 ```{code-block} javascript
 for (let i = 0; i < 11; i = i + 1) {
     console.log(i);
+}
+```
+
+```{code-block} c
+for (int i = 0; i < 11; i = i + 1) {
+    printf("%d\n", i);
 }
 ```
 ````
