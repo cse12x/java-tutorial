@@ -119,7 +119,8 @@ int array[5];
 // Code to fill array with some values
 
 int sum = 0;
-for (int i = 0; i < array.length; i++) {
+size_t length = sizeof(array) / sizeof(array[0]);
+for (int i = 0; i < length; i++) {
     sum += array[i];
 }
 ```
@@ -129,7 +130,8 @@ int array[5];
 // Code to fill array with some values
 
 int sum = 0;
-for (int i = 0; i < array.length; i++) {
+size_t length = sizeof(array) / sizeof(array[0]);
+for (int i = 0; i < length; i++) {
     sum += array[i];
 }
 ```
@@ -188,34 +190,36 @@ function shift(numbers) {
 
 ```{code-block} c
 void shift(int numbers[]) {
-    if (numbers.length > 0) {
+    size_t length = sizeof(numbers) / sizeof(numbers[0]);
+    if (length > 0) {
         // Save the first number for later
         int firstNumber = numbers[0];
 
         // Shift every number forward one index
-        for (int i = 0; i < numbers.length - 1; i++) {
+        for (int i = 0; i < length - 1; i++) {
             numbers[i] = numbers[i + 1];
         }
 
         // Store the old first number at the last spot
-        numbers[numbers.length - 1] = firstNumber;
+        numbers[length - 1] = firstNumber;
     }
 }
 ```
 
 ```{code-block} c++
 void shift(int numbers[]) {
-    if (numbers.length > 0) {
+    size_t length = sizeof(numbers) / sizeof(numbers[0]);
+    if (length > 0) {
         // Save the first number for later
         int firstNumber = numbers[0];
 
         // Shift every number forward one index
-        for (int i = 0; i < numbers.length - 1; i++) {
+        for (int i = 0; i < length - 1; i++) {
             numbers[i] = numbers[i + 1];
         }
 
         // Store the old first number at the last spot
-        numbers[numbers.length - 1] = firstNumber;
+        numbers[length - 1] = firstNumber;
     }
 }
 ```
