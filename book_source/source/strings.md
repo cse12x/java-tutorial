@@ -37,6 +37,23 @@ console.log(result);
 // Output:
 // Hello Seattle!
 ```
+
+```{code-block} c
+#include <stdio.h>
+#include <string.h>
+
+char result[50]; // buffer to hold result
+char *greeting = "Hello";
+char *location = "Seattle";
+strcpy(result, greeting);
+strcat(result, " ");
+strcat(result, location);
+strcat(result, "!");
+printf("%s\n", result);
+
+// Output:
+// Hello Seattle!
+```
 ````
 
 In Java, you can also concatenate `String`s with other data types, and they will be converted to `String`s!
@@ -59,6 +76,14 @@ print(s2)  # a4
 let s1 = "a";
 let s2 = s1 + 4;
 console.log(s2); // a4
+```
+
+```{code-block} c
+char *s1 = "a";
+char s2[2];
+strcpy(s2, s1);
+strcat(s2, "4");
+printf("%s\n", s2); // a4
 ```
 ````
 
@@ -105,6 +130,36 @@ let s5 = s1.substring(2);     //"llo"
 
 let c = s1[1];            // "e"
 let i = s1.indexOf("l");  // 2
+```
+
+```{code-block} c
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+char *s1 = "Hello";
+unsigned long int s1_len = strlen(s1);
+
+char s2[s1_len];
+for (int i = 0; i < s1_len; i++) {
+    s2[i] = toupper(s1[i]); // "HELLO"
+}
+
+char s3[s1_len];
+for (int i = 0; i < s1_len; i++) {
+    s2[i] = tolower(s1[i]); // "hello"
+}
+
+char s4[4];
+strncpy(s4, &s1[1], 3); // "ell"
+s4[3] = '\0';
+
+char s5[4];
+strncpy(s5, &s1[2], 3); // "llo"
+s5[3] = '\0';
+
+char c = s1[1];                // 'e'
+int  i = strstr(s1, "l") - s1; // 2
 ```
 ````
 
