@@ -1,10 +1,13 @@
 name: Build and Deploy
 on:
+  pull_request:
+    branches:
+      - main
   push:
     branches:
       - main
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -20,6 +23,11 @@ jobs:
           pip install -r requirements.txt
           make html
 
+  deploy:
+    needs: build
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
