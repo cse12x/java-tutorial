@@ -5,3 +5,7 @@ html:
 
 clean:
 	jupyter-book clean "$(SRC_DIR)"
+
+html-deploy:
+	jupyter-book build -W "$(SRC_DIR)"
+
