@@ -47,7 +47,7 @@ if __name__ == "__main__":
 ```{code-block} javascript
 // Contents of hello_world.js
 
-console.log("Hello World!")
+console.log("Hello World!");
 ```
 
 ````

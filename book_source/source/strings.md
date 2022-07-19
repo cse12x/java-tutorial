@@ -27,6 +27,16 @@ print(result)
 # Output:
 # Hello Seattle!
 ```
+
+```{code-block} javascript
+let greeting = "Hello";
+let location = "Seattle";
+let result = greeting + " " + location + "!";
+console.log(result);
+
+// Output:
+// Hello Seattle!
+```
 ````
 
 In Java, you can also concatenate `String`s with other data types, and they will be converted to `String`s!
@@ -43,6 +53,12 @@ System.out.println(s2);  // a4
 s1 = "a"
 s2 = s1 + str(4)
 print(s2)  # a4
+```
+
+```{code-block} javascript
+let s1 = "a";
+let s2 = s1 + 4;
+console.log(s2); // a4
 ```
 ````
 
@@ -74,8 +90,21 @@ s3 = s1.lower()  # "hello"
 s4 = s1[1:4]  # "ell"
 s5 = s1[2:]   # "llo"
 
-c = s1[1]      # "e"
-s1.index("l")  # 2
+c = s1[1]          # "e"
+i = s1.index("l")  # 2
+```
+
+```{code-block} javascript
+let s1 = "Hello";
+
+let s2 = s1.toUpperCase();  // "HELLO"
+let s3 = s1.toLowerCase();  // "hello"
+
+let s4 = s1.substring(1, 4);  // "ell"
+let s5 = s1.substring(2);     //"llo"
+
+let c = s1[1];            // "e"
+let i = s1.indexOf("l");  // 2
 ```
 ````
 

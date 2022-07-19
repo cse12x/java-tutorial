@@ -33,7 +33,7 @@ if __name__ == "__main__":
 ```{code-block} javascript
 // Contents of hello_world.js
 
-console.log("Hello World!")
+console.log("Hello World!");
 ```
 ````
 
@@ -60,9 +60,9 @@ print("Hello UW!")
 ```{code-block} javascript
 // Contents of hello_world.js
 
-console.log("Hello World!")
-console.log("Hello Seattle!")
-console.log("Hello UW!")
+console.log("Hello World!");
+console.log("Hello Seattle!");
+console.log("Hello UW!");
 ```
 ````
 
@@ -100,9 +100,9 @@ print("Hello UW!", end="")
 // Javascript doesn't have a native command to print without including a new-line at the end.
 // However, we can emulate this in node.js
 
-process.stdout.write("Hello World!")
-process.stdout.write("Hello Seattle!")
-process.stdout.write("Hello UW!")
+process.stdout.write("Hello World!");
+process.stdout.write("Hello Seattle!");
+process.stdout.write("Hello UW!");
 ```
 
 ````
@@ -135,9 +135,9 @@ print("Hello UW!", end="")
 // Javascript doesn't have a native command to print without including a new-line at the end.
 // However, we can emulate this in node.js
 
-process.stdout.write("Hello World! ")
-process.stdout.write("Hello Seattle! ")
-process.stdout.write("Hello UW! ")
+process.stdout.write("Hello World! ");
+process.stdout.write("Hello Seattle! ");
+process.stdout.write("Hello UW! ");
 ```
 ````
 
@@ -173,12 +173,12 @@ print("C")
 // Javascript doesn't have a native command to print without including a new-line at the end.
 // However, we can emulate this in node.js
 
-process.stdout.write("A")
-process.stdout.write("A")
-console.log("A")
-process.stdout.write("B")
-console.log("B")
-console.log("C")
+process.stdout.write("A");
+process.stdout.write("A");
+console.log("A");
+process.stdout.write("B");
+console.log("B");
+console.log("C");
 ```
 ````
 
@@ -228,14 +228,14 @@ print("Second")
 
 ```{code-block} javascript
 // This is a single-line comment
-console.log("First")
+console.log("First");
 /*
 This is
 a comment
 that spans multiple
 lines
 */
-console.log("Second")
+console.log("Second");
 ```
 ````
 

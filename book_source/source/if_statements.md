@@ -31,6 +31,17 @@ print(x <= y)
 print(x > y)
 print(x >= y)
 ```
+
+```{code-block} javascript
+let x = 4;
+let y = 5;
+console.log(x === y);
+console.log(x !== y);
+console.log(x < y);
+console.log(x <= y);
+console.log(x > y);
+console.log(x >= y);
+```
 ````
 
 ## Boolean Operators
@@ -58,6 +69,14 @@ b2 = False
 b3 = b1 and b2
 b4 = b3 or not b2
 b5 = b3 == b4
+```
+
+```{code-block} javascript
+let b1 = true;
+let b2 = false;
+let b3 = b1 && b2;
+let b4 = b3 || !b2;
+let b5 = b3 === b4;
 ```
 ````
 
@@ -104,6 +123,18 @@ elif n % 3 == 1 or n % 2 == 0:
 else:
     print('Case 2')
 print('After if/else')
+```
+
+```{code-block} javascript
+let n = 4;
+if (n % 3 === 0) {
+    console.log('Case 0');
+} else if (n % 3 === 1 || n % 2 === 0) {
+    console.log('Case 1');
+} else {
+    console.log('Case 2');
+}
+console.log('After if/else');
 ```
 ````
 

@@ -22,6 +22,13 @@ y = 5
 print(x)
 print(y)
 ```
+
+```{code-block} javascript
+let x = 4;
+let y = 5;
+console.log(x);
+console.log(y);
+```
 ````
 
 ```text
@@ -52,6 +59,13 @@ x = 4
 print(x)
 x = 7
 print(x)
+```
+
+```{code-block} javascript
+let x = 4;
+console.log(x);
+x = 7;
+console.log(x);
 ```
 ````
 
@@ -91,6 +105,18 @@ c = True
 d = "a"
 e = "Hello"
 ```
+
+```{code-block} javascript
+let a = 5;
+let b = 4.5;
+let c = true;
+
+// Note that Javascript doesn't really distinguish between
+// and a string of characters
+
+let d = "a";
+let e = "Hello";
+```
 ````
 
 Once a variable has a defined type, you cannot change the type of that variable. Java is also very strict when it comes to types. By saying `x` is of type `int`, you can only store integers in that variable. For example, the following code would cause a type error.
@@ -128,6 +154,14 @@ z = 4.5
 print(x + z - x // y)
 # Note that / in Java does integer division
 ```
+
+```{code-block} javascript
+let x = 5;
+let y = 3;
+let z = 4.5;
+console.log(x + z - Math.floor(x / y));
+// Note that / in Java does integer division (no need for Math.floor)
+```
 ````
 
 The output of this code is 8.5, which you may or may not have expected! One thing to note is that division between integers uses a special rule for **integer division**. When `x` is 5 and `y` is 3, `x / y` evaluates to 1 since 3 only goes into 5 one time evenly! You have to pay particular attention to when you are doing division to make sure if integer division is appropriate or not. If you do division involving a `double`, then "normal division" will be used.
@@ -150,6 +184,11 @@ public class Expressions {
 ```{code-block} python
 x = 3
 y = x ** 2
+```
+
+```{code-block} javascript
+let x = 3;
+let y = x ** 2;
 ```
 ````
 
@@ -184,6 +223,11 @@ c = float(a)
 d = int(b)
 print(c)  # Prints 5.0
 print(d)  # Prints 3
+```
+
+```{code-block} javascript
+// JavaScript only has a Number type that stores floating point / doubles values
+// There is no distinction between integers and doubles, and no way to convert between them
 ```
 ````
 
