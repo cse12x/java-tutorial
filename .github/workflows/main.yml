@@ -21,7 +21,7 @@ jobs:
       - name: Install and Build 🔧
         run: |
           pip install -r requirements.txt
-          make html
+          make html-deploy
 
       - name: Deploy 🚀
         if: github.event_name == 'push'
