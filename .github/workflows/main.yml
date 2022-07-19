@@ -7,7 +7,7 @@ on:
     branches:
       - main
 jobs:
-  build:
+  build_and_deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -23,12 +23,8 @@ jobs:
           pip install -r requirements.txt
           make html
 
-  deploy:
-    needs: build
-    if: github.event_name == 'push'
-    runs-on: ubuntu-latest
-    steps:
       - name: Deploy 🚀
+        if: github.event_name == 'push'
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
