@@ -8,3 +8,4 @@ chapters:
   - file: strings
   - file: methods
   - file: io_files
+  - file: arrays
