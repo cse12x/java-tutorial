@@ -43,6 +43,25 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
+```{code-block} javascript
+// File I/O is not allowed natively on Javascript
+// The following code is written for node.js
+
+var fs = require('fs');
+function main() {
+    let file = fs.readFileSync('poem.txt', 'utf8');
+    let lines = file.split('\n');
+    for (let i = 0; i < lines.length; i++) {
+        let tokens = lines[i].split(' ');
+        for (let j = 0; j < tokens.length; j++) {
+            console.log(tokens[j]);
+        }
+    }
+}
+
+main()
+```
 ````
 
 This code yield the following output.
@@ -129,6 +148,29 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
+```{code-block} javascript
+// File I/O is not allowed natively on Javascript
+// The following code is written for node.js
+
+var fs = require('fs');
+function main() {
+    let file = fs.readFileSync('poem.txt', 'utf8');
+    let line_num = 1;
+    let lines = file.split('\n');
+    for (let i = 0; i < lines.length; i++) {
+        let tokens = lines[i].split(' ');
+        let token_count = 0;
+        for (let j = 0; j < tokens.length; j++) {
+            token_count++;
+        }
+        console.log(line_num + ": " + token_count);
+        line_num++;
+    }
+}
+
+main()
+```
 ````
 
 The beauty of a `Scanner` is it hides all of the logic of figuring out what source of data it is attached to, how to fetch the next thing or tell if there is more data present. All we need to do as programmers is make a new `Scanner` instance and call the methods we want!
@@ -165,6 +207,17 @@ def main():
 
 if __name__ == "__main__":
     main()
+```
+
+```{code-block} javascript
+function main() {
+    let name = prompt("What is your name? ");
+    let age  = Number(prompt("What is your age? "));
+    
+    console.log("Welcome " + name + " (" + age + ")!");
+}
+
+main()
 ```
 ````
 

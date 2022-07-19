@@ -45,6 +45,26 @@ def greetings(times, greeting_to):
 if __name__ == "__main__":
     main()
 ```
+
+```{code-block} javascript
+function main() {
+  console.log("The main method starts");
+  let message = greetings(4, "Seattle");
+  console.log(message);
+  console.log("The main method ends");
+}
+
+function greetings(times, greetingTo) {
+  console.log("Greetings starts");
+  for (let i = 0; i < times; i++) {
+      console.log("Hello " + greetingTo + "!");
+  }
+  console.log("Greetings ends");
+  return "Greeted " + times + " times";
+}
+
+main();
+```
 ````
 
 This code has the output:
