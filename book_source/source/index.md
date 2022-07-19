@@ -50,6 +50,17 @@ if __name__ == "__main__":
 console.log("Hello World!");
 ```
 
+```{code-block} c
+// Contents of hello_world.c
+
+#include <stdio.h>
+
+void main()
+{
+    printf("Hello World!\n");
+}
+```
+
 ````
 
 That is a fair amount of text you have to write just to get the computer to say hello! One of the drawbacks of Java is it can be a bit verbose at times, but it something you get used to! Most of this code is what we might call "boiler plate" code, or code that you just have to write because the language requires it but doesn't really do anything important. It will take some time, but you will just need to memorize these wrapper components you will be writing for most Java programs. We'll start by explaining the simplest part, the print statement, and then will explain the rest.
