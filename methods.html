@@ -400,8 +400,8 @@ title="Print to PDF"
 <p>Methods allow you to define reusable bundles of code that can help reduce redundancy and organize your code for readability. The concept of methods, or also called functions in other languages, are the same in Java but the syntax looks a little bit different.</p>
 <p>Like before, we will start by showing the syntax and then will explain the components.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="f926e19f-3750-400d-9360-fa7d04aa5106" name="6d028543-b691-40b2-8e85-640d3a86b0dd" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="f926e19f-3750-400d-9360-fa7d04aa5106">
+<input checked="checked" id="29ba9083-2210-4404-b5cf-2f987d6b2e60" name="a7fe0d83-ad5e-4dad-8b88-bdf1b8fa8ea3" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="29ba9083-2210-4404-b5cf-2f987d6b2e60">
 JAVA</label><div class="sd-tab-content docutils">
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Example</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -423,8 +423,8 @@ JAVA</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="48951e46-b4ed-4403-8bd4-0bb2f46484fe" name="6d028543-b691-40b2-8e85-640d3a86b0dd" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="48951e46-b4ed-4403-8bd4-0bb2f46484fe">
+<input id="f24c0837-de22-4277-98e3-61aae2dbcf1a" name="a7fe0d83-ad5e-4dad-8b88-bdf1b8fa8ea3" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="f24c0837-de22-4277-98e3-61aae2dbcf1a">
 PYTHON</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The main method starts&quot;</span><span class="p">)</span>
@@ -443,6 +443,29 @@ PYTHON</label><div class="sd-tab-content docutils">
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<input id="cdb1cea0-c479-4f4d-a57a-fe8e9e868ed4" name="a7fe0d83-ad5e-4dad-8b88-bdf1b8fa8ea3" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-javascript" for="cdb1cea0-c479-4f4d-a57a-fe8e9e868ed4">
+JAVASCRIPT</label><div class="sd-tab-content docutils">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;The main method starts&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">greetings</span><span class="p">(</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Seattle&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;The main method ends&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">greetings</span><span class="p">(</span><span class="nx">times</span><span class="p">,</span><span class="w"> </span><span class="nx">greetingTo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Greetings starts&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">times</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">greetingTo</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;!&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Greetings ends&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot;Greeted &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">times</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; times&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="nx">main</span><span class="p">();</span><span class="w"></span>
 </pre></div>
 </div>
 </div>

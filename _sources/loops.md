@@ -25,6 +25,16 @@ while n < 100:
 
 print("After loop")
 ```
+
+```{code-block} javascript
+let n = 1;
+while (n < 100) {
+    console.log(n);
+    n = 2 * n;
+}
+
+console.log("After loop");
+```
 ````
 
 The semantics of the `while` loop are consistent across most languages: it repeatedly evaluates the condition and each time, if the condition is true, runs the body of the loop and stops once the condition is evaluated to false.
@@ -43,6 +53,12 @@ for (int i = 0; i < 11; i = i + 1) {
 ```{code-block} python
 for i in range(11):
     print(i)
+```
+
+```{code-block} javascript
+for (let i = 0; i < 11; i = i + 1) {
+    console.log(i);
+}
 ```
 ````
 
