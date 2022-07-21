@@ -4,6 +4,8 @@
 
 Author: [Hunter Schafer](https://homes.cs.washington.edu/~hschafer/)
 
+Contributors: Sumant Guha 
+
 This repository maintains the source code for our Java Tutorial. This tutorial is designed for students who already have programming experience
 in some text-based language (e.g., Python) but have not yet experienced Java.
 
