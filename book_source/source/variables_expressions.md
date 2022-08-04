@@ -156,7 +156,7 @@ b = 4.5
 c = True
 
 # Note that Python doesn't really distinguish between
-# and a string of characters
+# strings or characters
 
 d = "a"
 e = "Hello"
@@ -168,7 +168,7 @@ let b = 4.5;
 let c = true;
 
 // Note that Javascript doesn't really distinguish between
-// and a string of characters
+// strings or characters
 
 let d = "a";
 let e = "Hello";
