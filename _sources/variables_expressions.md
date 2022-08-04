@@ -33,12 +33,13 @@ console.log(y);
 ```{code-block} c
 #include <stdio.h>
 
-void main()
+int main()
 {
     int x = 4;
     int y = 6;
     printf("%d\n", x);
     printf("%d\n", y);
+    return 0;
 }
 ```
 
@@ -99,12 +100,13 @@ console.log(x);
 ```{code-block} c
 #include <stdio.h>
 
-void main()
+int main()
 {
     int x = 4;
     printf("%d\n", x);
     x = 7;
     printf("%d\n", x);
+    return 0;
 }
 ```
 
@@ -177,13 +179,14 @@ let e = "Hello";
 ```{code-block} c
 #include <stdio.h>
 
-void main()
+int main()
 {
     int a = 5;
     double b = 4.5;
     int c = 1; // c doesn't have a boolean type
     char d = 'a';
     char *e = "Hello";
+    return 0;
 }
 ```
 
@@ -250,12 +253,13 @@ console.log(x + z - Math.floor(x / y));
 ```{code-block} c
 #include <stdio.h>
 
-void main()
+int main()
 {
     int x = 5;
     int y = 3;
     double z = 4.5;
     printf("%f\n", x + z - x / y);
+    return 0;
 }
 ```
 
@@ -305,11 +309,12 @@ let y = x ** 2;
 #include <stdio.h>
 #include <math.h>
 
-void main()
+int main()
 {
     int x = 3;
     int y = pow(x, 2);
     printf("%d\n", y);
+    return 0;
 }
 ```
 
@@ -371,7 +376,7 @@ print(d)  # Prints 3
 ```{code-block} c
 #include <stdio.h>
 
-void main()
+int main()
 {
     int a = 5;
     double b = 3.5;
@@ -379,6 +384,7 @@ void main()
     int d = (int) b;
     printf("%f\n", c);  // Prints 5.0
     printf("%d\n", d);  // Prints 3
+    return 0;
 }
 ```
 

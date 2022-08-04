@@ -67,7 +67,7 @@ main()
 #include <stdio.h>
 #include <string.h>
 
-void main() 
+int main()
 {
     const char *delimiter_characters = " ";
     const char *filename = "poem.txt";
@@ -85,6 +85,7 @@ void main()
     }
 
     fclose( input_file );
+    return 0;
 }
 ```
 
@@ -99,7 +100,7 @@ int main()
 {
     string token;
     ifstream file("poem.txt");
-    while ( getline(file, token) ) 
+    while ( getline(file, token) )
     {
         istringstream line(token);
         while (line >> token)
@@ -225,7 +226,7 @@ main()
 #include <stdio.h>
 #include <string.h>
 
-void main() 
+int main()
 {
     const char *delimiter_characters = " ";
     const char *filename = "poem.txt";
@@ -241,7 +242,7 @@ void main()
             token_count++;
             last_token = strtok( NULL, delimiter_characters );
         }
-        
+
         printf("%d: ", line_num);
         printf("%d\n", token_count)
 
@@ -249,6 +250,7 @@ void main()
     }
 
     fclose( input_file );
+    return 0;
 }
 ```
 
@@ -265,7 +267,7 @@ int main()
     ifstream file("poem.txt");
     int line_num = 1;
 
-    while ( getline(file, token) ) 
+    while ( getline(file, token) )
     {
         istringstream line(token);
         int token_count = 0;
@@ -325,7 +327,7 @@ if __name__ == "__main__":
 function main() {
     let name = prompt("What is your name? ");
     let age  = Number(prompt("What is your age? "));
-    
+
     console.log("Welcome " + name + " (" + age + ")!");
 }
 
@@ -335,19 +337,20 @@ main()
 ```{code-block} c
 #include <stdio.h>
 
-void main()
+int main()
 {
     char *name;
     int age;
-    
+
     printf("What is your name? ");
     scanf("%s", name);
-    
+
     printf("What is your age? ");
     scanf("%d", &age);
-    
+
     printf("Welcome %s ", name);
     printf("(%d)!", age);
+    return 0;
 }
 ```
 
@@ -356,7 +359,7 @@ void main()
 
 using namespace std;
 
-int main() 
+int main()
 {
     string name;
     int age;
