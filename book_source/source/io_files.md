@@ -113,7 +113,7 @@ int main()
 ```
 ````
 
-This code yield the following output.
+This code yields the following output.
 
 ```text
 she
