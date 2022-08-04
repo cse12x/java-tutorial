@@ -186,13 +186,15 @@ int  i = strstr(s1, "l") - s1; // 2
 #include <algorithm>
 #include <string>
 
+using namespace std;
+
 string s1 = "Hello";
 
 transform(s1.begin(), s1.end(), s1.begin(), ::toupper);  // "HELLO"
 transform(s1.begin(), s1.end(), s1.begin(), ::tolower);  // "hello"
 
-string s4 = s1.substring(1, 3);  // "ell"
-string s5 = s1.substring(2);     // "llo"
+string s4 = s1.substr(1, 3);  // "ell"
+string s5 = s1.substr(2);     // "llo"
 
 char c = s1.at(1);         // 'e'
 int i = s1.find('l');      // 2

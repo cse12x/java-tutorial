@@ -134,7 +134,7 @@ bool b5 = b3 == b4;
 Conditional statements or if/else statements in Java behave similarly to other languages. Important things to note about conditionals in Java are:
 
 * `if` and `else if` statements require parentheses around their conditions.
-* Java uses curly brackets (`{}`) to denote the opening and closing of an if/ese statement's body. Anything inside the curly brackets of a if/else statement only run if the condition for that block is met.
+* Java uses curly brackets (`{}`) to denote the opening and closing of an if/else statement's body. Anything inside the curly brackets of a if/else statement only run if the condition for that block is met.
 * Proper indentation is not a requirement of the Java language, but it is **strongly recommended** that you use proper indentation to show what lines of code belong inside/outside the body of an if statement.
 
 ````{tab-set-code}
