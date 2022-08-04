@@ -41,9 +41,10 @@ console.log("Hello World!");
 
 #include <stdio.h>
 
-void main()
+int main()
 {
     printf("Hello World!\n");
+    return 0;
 }
 ```
 
@@ -93,11 +94,12 @@ console.log("Hello UW!");
 ```{code-block} c
 #include <stdio.h>
 
-void main()
+int main()
 {
     printf("Hello World!\n");
     printf("Hello Seattle!\n");
     printf("Hello UW!\n");
+    return 0;
 }
 ```
 
@@ -158,11 +160,12 @@ process.stdout.write("Hello UW!");
 ```{code-block} c
 #include <stdio.h>
 
-void main()
+int main()
 {
     printf("Hello World!");
     printf("Hello Seattle!");
     printf("Hello UW!");
+    return 0;
 }
 ```
 
@@ -215,11 +218,12 @@ process.stdout.write("Hello UW! ");
 ```{code-block} c
 #include <stdio.h>
 
-void main()
+int main()
 {
     printf("Hello World! ");
     printf("Hello Seattle! ");
     printf("Hello UW! ");
+    return 0;
 }
 ```
 
@@ -279,7 +283,7 @@ console.log("C");
 ```{code-block} c
 #include <stdio.h>
 
-void main()
+int main()
 {
     printf("A");
     printf("A");
@@ -287,6 +291,7 @@ void main()
     printf("B");
     printf("B\n");
     printf("C\n");
+    return 0;
 }
 ```
 
@@ -368,7 +373,7 @@ console.log("Second");
 ```{code-block} c
 #include <stdio.h>
 
-void main()
+int main()
 {
     // This is a single-line comment
     printf("First\n");
@@ -379,6 +384,7 @@ void main()
     lines
     */
     printf("Second\n");
+    return 0;
 }
 ```
 

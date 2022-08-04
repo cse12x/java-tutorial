@@ -85,21 +85,21 @@ char *greetings(int times, char *greetingTo) {
     char *retGreeted = (char *) malloc(1024);
     char times_str[20];
     snprintf(times_str, "%d", times);
-    
+
     strcpy(retGreeted, "Greeted ");
     strcat(retGreeted, times_str);
     strcat(retGreeted, " times");
     return retGreeted;
 }
 
-void main() {
+int main() {
     printf("The main method starts\n");
     char *message;
     message = greetings(4, "Seattle");
     printf("%s\n", message);
     free(message);
     printf("The main method ends\n");
-}
+    return 0;
 ```
 
 ```{code-block} c++
@@ -114,13 +114,13 @@ char *greetings(int times, string greetingTo) {
     for (int i = 0; i < times; i++) {
         cout << "Hello " << greetingTo << "!" << endl;
     }
-    
+
     cout << "Greetings ends" << endl;
 
     char *retGreeted = (char *) malloc(1024);
     char times_str[20];
     sprintf(times_str, "%d", times);
-    
+
     strcpy(retGreeted, "Greeted ");
     strcat(retGreeted, times_str);
     strcat(retGreeted, " times");
@@ -134,7 +134,7 @@ int main() {
     cout << message << endl;
     free(message);
     cout << "The main method ends" << endl;
-    
+
     return 0;
 }
 ````
