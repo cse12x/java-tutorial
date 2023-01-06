@@ -16,7 +16,7 @@ array[1] = 14;
 array[3] = array[1];
 array[4] = 5;
 
-System.out.println(array);
+System.out.println(Arrays.toString(array));
 ```
 
 ```{code-block} python
@@ -249,5 +249,70 @@ void shift(int numbers[]) {
         numbers[numbers.length - 1] = firstNumber;
     }
 }
+```
+````
+
+## Printing Arrays
+
+To print the contents of a Java array in a readable format, we first need to convert it to a String using the `Arrays.toString` method. We can pass our array as a *parameter* to this method, and it will *return* the formatted String version of the array.
+
+The formatted String will look like a comma-separated list with square brackets on both ends (e.g. `[8, 1, 7, 2, 5]`).
+
+
+````{tab-set-code}
+
+```{code-block} java
+int[] array = new int[3];
+array[0] = 8;
+array[1] = 1;
+array[2] = 7;
+
+System.out.println(Arrays.toString(array));
+// Output: [8, 1, 7]
+```
+
+```{code-block} python
+array = [0] * 3  # Short-hand to make a length 3 list
+array[0] = 8
+array[1] = 1
+array[2] = 7
+
+print(array)
+// Output: [8, 1, 7]
+```
+
+```{code-block} javascript
+let array = [8, 1, 7];
+
+console.log(array);
+// Output: [8, 1, 7]
+```
+
+```{code-block} c
+int array[3];
+array[0] = 8;
+array[1] = 1;
+array[2] = 7;
+
+printf("[");
+for (int i = 0; i < 2; i++) {
+    printf("%d, ", array[i]);
+}
+printf("%d]\n", array[2]);
+// Output: [8, 1, 7]
+```
+
+```{code-block} c++
+int array[3];
+array[0] = 8;
+array[1] = 1;
+array[2] = 7;
+
+cout << "[";
+for (int i = 0; i < 2; i++) {
+    cout << array[i] << ", ";
+}
+cout << array[2] << "]" << endl;
+// Output: [8, 1, 7]
 ```
 ````
