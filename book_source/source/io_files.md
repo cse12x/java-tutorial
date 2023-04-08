@@ -412,7 +412,7 @@ public class FileWriting {
         output.println("she sells sea shells");
         output.println("by the sea shore");
         for (int i = 1; i <= 5; i++) {
-            output.println(i);
+            output.print(i);
         }
     }
 }
