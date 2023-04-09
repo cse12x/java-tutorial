@@ -1,44 +1,55 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Variables, Types, Expressions &#8212; Java Tutorial</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -77,7 +88,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -87,62 +98,94 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'variables_expressions';</script>
     <link rel="shortcut icon" href="_static/favicon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="If/Else Statements" href="if_statements.html" />
     <link rel="prev" title="Printing and Comments" href="printing.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Java Tutorial</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -152,343 +195,248 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="printing.html">
-   <i class="fas fa-book fa-fw">
-   </i>
-   Printing and Comments
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   <i class="fas fa-book fa-fw">
-   </i>
-   Variables, Types, Expressions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="if_statements.html">
-   <i class="fas fa-book fa-fw">
-   </i>
-   If/Else Statements
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="loops.html">
-   <i class="fas fa-book fa-fw">
-   </i>
-   Loops
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="strings.html">
-   <i class="fas fa-book fa-fw">
-   </i>
-   Strings
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="methods.html">
-   <i class="fas fa-book fa-fw">
-   </i>
-   Methods
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="io_files.html">
-   <i class="fas fa-book fa-fw">
-   </i>
-   Files and I/O
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="arrays.html">
-   <i class="fas fa-book fa-fw">
-   </i>
-   Arrays
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="printing.html"><i class="fas fa-book fa-fw"></i> Printing and Comments</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><i class="fas fa-book fa-fw"></i> Variables, Types, Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="if_statements.html"><i class="fas fa-book fa-fw"></i> If/Else Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loops.html"><i class="fas fa-book fa-fw"></i> Loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="strings.html"><i class="fas fa-book fa-fw"></i> Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="methods.html"><i class="fas fa-book fa-fw"></i> Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="io_files.html"><i class="fas fa-book fa-fw"></i> Files and I/O</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arrays.html"><i class="fas fa-book fa-fw"></i> Arrays</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            <a href="https://cse12x.github.io/java-tutorial/acknowledgements.html">Acknowledgements</a><br/>Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/cse12x/java-tutorial" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cse12x/java-tutorial/edit/main/book_source/source/variables_expressions.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cse12x/java-tutorial/issues/new?title=Issue%20on%20page%20%2Fvariables_expressions.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
 
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
 
 
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/variables_expressions.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
   </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/cse12x/java-tutorial"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/cse12x/java-tutorial/issues/new?title=Issue%20on%20page%20%2Fvariables_expressions.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/cse12x/java-tutorial/edit/main/book_source/source/variables_expressions.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Edit this page"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="headerbtn__text-container">suggest edit</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/variables_expressions.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variables">
-   Variables
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#assignment">
-   Assignment
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#types">
-   Types
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#expressions">
-   Expressions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#casting">
-   Casting
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1><i class="fas fa-book fa-fw"></i> Variables, Types, Expressions</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variables">
-   Variables
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#assignment">
-   Assignment
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#types">
-   Types
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#expressions">
-   Expressions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#casting">
-   Casting
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><i class="fas fa-book fa-fw"></i> Variables, Types, Expressions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment">Assignment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types">Types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expressions">Expressions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#casting">Casting</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="i-class-fas-fa-book-fa-fw-i-variables-types-expressions">
-<h1><i class="fas fa-book fa-fw"></i> Variables, Types, Expressions<a class="headerlink" href="#i-class-fas-fa-book-fa-fw-i-variables-types-expressions" title="Permalink to this headline">#</a></h1>
+<h1><i class="fas fa-book fa-fw"></i> Variables, Types, Expressions<a class="headerlink" href="#i-class-fas-fa-book-fa-fw-i-variables-types-expressions" title="Permalink to this heading">#</a></h1>
 <section id="variables">
-<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">#</a></h2>
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h2>
 <p>Every variable and Java must be declared with a <strong>type</strong> to indicate which type of data will be stored in that variable. For example, the following program makes a variable called <code class="docutils literal notranslate"><span class="pre">x</span></code> and another variable called <code class="docutils literal notranslate"><span class="pre">y</span></code> and prints them out. Note that you have to specify when declaring the variable <code class="docutils literal notranslate"><span class="pre">x</span></code> that it will store an integer number (<code class="docutils literal notranslate"><span class="pre">int</span></code>).</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="18e5fdae-2111-4a64-87fb-36c141c1b263" name="17eb97a4-e1b1-40f7-9348-334f11a19337" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="18e5fdae-2111-4a64-87fb-36c141c1b263">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="sd-tab-item-0">
 JAVA</label><div class="sd-tab-content docutils">
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Variables</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -501,8 +449,8 @@ JAVA</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="22249083-1824-4f78-926f-58777147cdeb" name="17eb97a4-e1b1-40f7-9348-334f11a19337" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="22249083-1824-4f78-926f-58777147cdeb">
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="sd-tab-item-1">
 PYTHON</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
@@ -511,8 +459,8 @@ PYTHON</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="7bbc6873-1ea4-4f95-9d44-d2f5a8bb2a9a" name="17eb97a4-e1b1-40f7-9348-334f11a19337" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-javascript" for="7bbc6873-1ea4-4f95-9d44-d2f5a8bb2a9a">
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-javascript" for="sd-tab-item-2">
 JAVASCRIPT</label><div class="sd-tab-content docutils">
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="p">;</span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
@@ -521,8 +469,8 @@ JAVASCRIPT</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="16e64afa-36b8-489b-9ee0-ed01d48082fb" name="17eb97a4-e1b1-40f7-9348-334f11a19337" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-c" for="16e64afa-36b8-489b-9ee0-ed01d48082fb">
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-c" for="sd-tab-item-3">
 C</label><div class="sd-tab-content docutils">
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 
@@ -537,8 +485,8 @@ C</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="817c5db1-6deb-4b9d-bc2f-c46f12b43cab" name="17eb97a4-e1b1-40f7-9348-334f11a19337" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-c++" for="817c5db1-6deb-4b9d-bc2f-c46f12b43cab">
+<input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-c++" for="sd-tab-item-4">
 C++</label><div class="sd-tab-content docutils">
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 
@@ -564,11 +512,11 @@ C++</label><div class="sd-tab-content docutils">
 <p>Note that you only have to specify the type of the variable when you first <strong>declare</strong> the variable. In other lines of code when you are using the variable, you just use the variable name (i.e., <code class="docutils literal notranslate"><span class="pre">System.out.println(x)</span></code>).</p>
 </section>
 <section id="assignment">
-<h2>Assignment<a class="headerlink" href="#assignment" title="Permalink to this headline">#</a></h2>
+<h2>Assignment<a class="headerlink" href="#assignment" title="Permalink to this heading">#</a></h2>
 <p>Variables in Java operate like most other languages such that you can update their values with an assignment statement. The following program makes a variable <code class="docutils literal notranslate"><span class="pre">x</span></code>, prints it out and then updates the value before printing it again. Note that as we said above, we don’t need to specify the type in the assignment statement, only the initial declaration.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="dc80ce00-1061-42e1-8c47-999ce23cb0c6" name="445cbcd9-af92-410f-a733-ec77a8d65e25" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="dc80ce00-1061-42e1-8c47-999ce23cb0c6">
+<input checked="checked" id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="sd-tab-item-5">
 JAVA</label><div class="sd-tab-content docutils">
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Assignment</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -581,8 +529,8 @@ JAVA</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="03c463a3-827d-4924-955d-3234cc71a122" name="445cbcd9-af92-410f-a733-ec77a8d65e25" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="03c463a3-827d-4924-955d-3234cc71a122">
+<input id="sd-tab-item-6" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="sd-tab-item-6">
 PYTHON</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -591,8 +539,8 @@ PYTHON</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="da89d348-d189-4805-bfa1-7643e15ab494" name="445cbcd9-af92-410f-a733-ec77a8d65e25" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-javascript" for="da89d348-d189-4805-bfa1-7643e15ab494">
+<input id="sd-tab-item-7" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-javascript" for="sd-tab-item-7">
 JAVASCRIPT</label><div class="sd-tab-content docutils">
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="p">;</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
@@ -601,8 +549,8 @@ JAVASCRIPT</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="2d439ef6-0445-46db-b1d7-388f859379d3" name="445cbcd9-af92-410f-a733-ec77a8d65e25" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-c" for="2d439ef6-0445-46db-b1d7-388f859379d3">
+<input id="sd-tab-item-8" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-c" for="sd-tab-item-8">
 C</label><div class="sd-tab-content docutils">
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 
@@ -617,8 +565,8 @@ C</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="43f808a2-9364-4506-897c-53ebf908cf36" name="445cbcd9-af92-410f-a733-ec77a8d65e25" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-c++" for="43f808a2-9364-4506-897c-53ebf908cf36">
+<input id="sd-tab-item-9" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-c++" for="sd-tab-item-9">
 C++</label><div class="sd-tab-content docutils">
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 
@@ -639,7 +587,7 @@ C++</label><div class="sd-tab-content docutils">
 </div>
 </section>
 <section id="types">
-<h2>Types<a class="headerlink" href="#types" title="Permalink to this headline">#</a></h2>
+<h2>Types<a class="headerlink" href="#types" title="Permalink to this heading">#</a></h2>
 <p>Since you have to be explicit in Java about types, it’s important to know some of the fundamental data types that you can use in your programs. The following list shows the most common data types used in Java.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">int</span></code> typed variables store integer numbers such as <code class="docutils literal notranslate"><span class="pre">5</span></code>.</p></li>
@@ -650,8 +598,8 @@ C++</label><div class="sd-tab-content docutils">
 </ul>
 <p>Note that <code class="docutils literal notranslate"><span class="pre">String</span></code> starts with a capital letter! This is because it is an “Object type” rather than a “primitive type”. We won’t cover this distinction in this section, but just note that <code class="docutils literal notranslate"><span class="pre">String</span></code>s can do more than simpler data types such as an <code class="docutils literal notranslate"><span class="pre">int</span></code> can. Also note that you surround a <code class="docutils literal notranslate"><span class="pre">char</span></code> value with single-quotes (<code class="docutils literal notranslate"><span class="pre">'</span></code>) and <code class="docutils literal notranslate"><span class="pre">String</span></code>s with double-quotes (<code class="docutils literal notranslate"><span class="pre">&quot;</span></code>).</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="7df7075b-59fe-4274-a2ac-d2a9dc53c3ed" name="b7d4a96b-1028-459c-b2e6-6d0e071f9804" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="7df7075b-59fe-4274-a2ac-d2a9dc53c3ed">
+<input checked="checked" id="sd-tab-item-10" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="sd-tab-item-10">
 JAVA</label><div class="sd-tab-content docutils">
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Types</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -665,8 +613,8 @@ JAVA</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="321a8e1f-d60f-4ccc-9c09-9f468c00d8ec" name="b7d4a96b-1028-459c-b2e6-6d0e071f9804" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="321a8e1f-d60f-4ccc-9c09-9f468c00d8ec">
+<input id="sd-tab-item-11" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="sd-tab-item-11">
 PYTHON</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mf">4.5</span>
@@ -680,8 +628,8 @@ PYTHON</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="31a9648b-4c04-426c-aeee-f68a96b4ea70" name="b7d4a96b-1028-459c-b2e6-6d0e071f9804" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-javascript" for="31a9648b-4c04-426c-aeee-f68a96b4ea70">
+<input id="sd-tab-item-12" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-javascript" for="sd-tab-item-12">
 JAVASCRIPT</label><div class="sd-tab-content docutils">
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4.5</span><span class="p">;</span>
@@ -695,8 +643,8 @@ JAVASCRIPT</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="845f0c97-a903-41d0-8cc1-c219f67a5394" name="b7d4a96b-1028-459c-b2e6-6d0e071f9804" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-c" for="845f0c97-a903-41d0-8cc1-c219f67a5394">
+<input id="sd-tab-item-13" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-c" for="sd-tab-item-13">
 C</label><div class="sd-tab-content docutils">
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 
@@ -712,8 +660,8 @@ C</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="1f168c0f-85bb-46f5-ad4b-3cb99a26e8f2" name="b7d4a96b-1028-459c-b2e6-6d0e071f9804" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-c++" for="1f168c0f-85bb-46f5-ad4b-3cb99a26e8f2">
+<input id="sd-tab-item-14" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-c++" for="sd-tab-item-14">
 C++</label><div class="sd-tab-content docutils">
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 
@@ -742,11 +690,11 @@ C++</label><div class="sd-tab-content docutils">
 </div>
 </section>
 <section id="expressions">
-<h2>Expressions<a class="headerlink" href="#expressions" title="Permalink to this headline">#</a></h2>
+<h2>Expressions<a class="headerlink" href="#expressions" title="Permalink to this heading">#</a></h2>
 <p>Java provides operators to combine values in a particular way for computation. All of the usual operators such as addition (<code class="docutils literal notranslate"><span class="pre">+</span></code>), subtraction (<code class="docutils literal notranslate"><span class="pre">-</span></code>), multiplication (<code class="docutils literal notranslate"><span class="pre">*</span></code>) and division (<code class="docutils literal notranslate"><span class="pre">/</span></code>) are present.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="899e0bc6-f4b9-435a-9a61-0b22132f7e23" name="c4132ecb-aa78-4813-b527-89063027cf20" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="899e0bc6-f4b9-435a-9a61-0b22132f7e23">
+<input checked="checked" id="sd-tab-item-15" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="sd-tab-item-15">
 JAVA</label><div class="sd-tab-content docutils">
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Expressions</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -759,8 +707,8 @@ JAVA</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="a3f17c0f-326f-4b3c-84ca-aaf6466f95f7" name="c4132ecb-aa78-4813-b527-89063027cf20" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="a3f17c0f-326f-4b3c-84ca-aaf6466f95f7">
+<input id="sd-tab-item-16" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="sd-tab-item-16">
 PYTHON</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
@@ -770,8 +718,8 @@ PYTHON</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="2bce4b17-6ec1-43d7-9590-ee1691f78d94" name="c4132ecb-aa78-4813-b527-89063027cf20" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-javascript" for="2bce4b17-6ec1-43d7-9590-ee1691f78d94">
+<input id="sd-tab-item-17" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-javascript" for="sd-tab-item-17">
 JAVASCRIPT</label><div class="sd-tab-content docutils">
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span>
@@ -781,8 +729,8 @@ JAVASCRIPT</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="9b09fce5-e657-4b04-9170-7b12a6902bf0" name="c4132ecb-aa78-4813-b527-89063027cf20" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-c" for="9b09fce5-e657-4b04-9170-7b12a6902bf0">
+<input id="sd-tab-item-18" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-c" for="sd-tab-item-18">
 C</label><div class="sd-tab-content docutils">
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 
@@ -797,8 +745,8 @@ C</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="e9dc20b2-ac78-4f96-8a06-8bb0a3549f43" name="c4132ecb-aa78-4813-b527-89063027cf20" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-c++" for="e9dc20b2-ac78-4f96-8a06-8bb0a3549f43">
+<input id="sd-tab-item-19" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-c++" for="sd-tab-item-19">
 C++</label><div class="sd-tab-content docutils">
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 
@@ -819,8 +767,8 @@ C++</label><div class="sd-tab-content docutils">
 <p>Related to the concept of integer division is computing the remainder of a division operation. Java provides the <strong>modulo operator</strong> or <strong>mod</strong> to compute the remainder from integer division with the symbol <code class="docutils literal notranslate"><span class="pre">%</span></code>. Using the numbers from above, the expression <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">%</span> <span class="pre">y</span></code> would equal 2 since the remainder of dividing 5 by 3 is 2.</p>
 <p>Java has no operator for exponentiation (e.g., <span class="math notranslate nohighlight">\(3^2\)</span>). Instead, you have to use the <code class="docutils literal notranslate"><span class="pre">Math</span></code> module to do powers.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="deee8d7d-34fd-4501-8274-f6350fa39898" name="64296332-93e8-48a6-be0b-3a5f571b0388" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="deee8d7d-34fd-4501-8274-f6350fa39898">
+<input checked="checked" id="sd-tab-item-20" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="sd-tab-item-20">
 JAVA</label><div class="sd-tab-content docutils">
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Expressions</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -831,24 +779,24 @@ JAVA</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="6668a543-b70a-488b-910d-b82e09dd7afc" name="64296332-93e8-48a6-be0b-3a5f571b0388" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="6668a543-b70a-488b-910d-b82e09dd7afc">
+<input id="sd-tab-item-21" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="sd-tab-item-21">
 PYTHON</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
 </pre></div>
 </div>
 </div>
-<input id="499c381e-8806-4dea-870d-3067964a168c" name="64296332-93e8-48a6-be0b-3a5f571b0388" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-javascript" for="499c381e-8806-4dea-870d-3067964a168c">
+<input id="sd-tab-item-22" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-javascript" for="sd-tab-item-22">
 JAVASCRIPT</label><div class="sd-tab-content docutils">
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span>
 <span class="kd">let</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">**</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
-<input id="5b219dba-e3a0-4b19-97c6-ee9a8af7a8ef" name="64296332-93e8-48a6-be0b-3a5f571b0388" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-c" for="5b219dba-e3a0-4b19-97c6-ee9a8af7a8ef">
+<input id="sd-tab-item-23" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-c" for="sd-tab-item-23">
 C</label><div class="sd-tab-content docutils">
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;math.h&gt;</span>
@@ -863,8 +811,8 @@ C</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="6ef986c2-d459-4eb6-bf2d-a3670278f715" name="64296332-93e8-48a6-be0b-3a5f571b0388" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-c++" for="6ef986c2-d459-4eb6-bf2d-a3670278f715">
+<input id="sd-tab-item-24" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-c++" for="sd-tab-item-24">
 C++</label><div class="sd-tab-content docutils">
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;bits/stdc++.h&gt;</span>
@@ -885,7 +833,7 @@ C++</label><div class="sd-tab-content docutils">
 </div>
 </section>
 <section id="casting">
-<h2>Casting<a class="headerlink" href="#casting" title="Permalink to this headline">#</a></h2>
+<h2>Casting<a class="headerlink" href="#casting" title="Permalink to this heading">#</a></h2>
 <p>You are able to convert between types by <strong>casting</strong>. Casting is the process of converting one type to another. Note that there are special rules for what values can or can’t be cast from one type to another that we will not discuss completely. The most important casting scenarios involve:</p>
 <ul class="simple">
 <li><p>Converting an <code class="docutils literal notranslate"><span class="pre">int</span></code> to a <code class="docutils literal notranslate"><span class="pre">double</span></code></p></li>
@@ -893,8 +841,8 @@ C++</label><div class="sd-tab-content docutils">
 </ul>
 <p>The following program shows the syntax to cast from these two types. For example, <code class="docutils literal notranslate"><span class="pre">(double)</span> <span class="pre">a</span></code> is an expression that interprets the value stored in <code class="docutils literal notranslate"><span class="pre">a</span></code> as a double. Note that it doesn’t actually change the value stored in <code class="docutils literal notranslate"><span class="pre">a</span></code>, just returns the <code class="docutils literal notranslate"><span class="pre">double</span></code> version of whatever value is currently inside <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="6a55bd68-fd9d-469b-86b9-e5dbbcb1063e" name="39add925-be53-4c85-baaf-1bcf9d428ac4" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="6a55bd68-fd9d-469b-86b9-e5dbbcb1063e">
+<input checked="checked" id="sd-tab-item-25" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-java" for="sd-tab-item-25">
 JAVA</label><div class="sd-tab-content docutils">
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Casting</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -909,8 +857,8 @@ JAVA</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="f15d8ceb-8a9e-4a8e-bf7b-9dd73501474e" name="39add925-be53-4c85-baaf-1bcf9d428ac4" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="f15d8ceb-8a9e-4a8e-bf7b-9dd73501474e">
+<input id="sd-tab-item-26" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-python" for="sd-tab-item-26">
 PYTHON</label><div class="sd-tab-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mf">3.5</span>
@@ -921,16 +869,16 @@ PYTHON</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="59b6e1e4-4f12-4c2c-a6f1-5cd4470f56c3" name="39add925-be53-4c85-baaf-1bcf9d428ac4" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-javascript" for="59b6e1e4-4f12-4c2c-a6f1-5cd4470f56c3">
+<input id="sd-tab-item-27" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-javascript" for="sd-tab-item-27">
 JAVASCRIPT</label><div class="sd-tab-content docutils">
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// JavaScript only has a Number type that stores floating point / doubles values</span>
 <span class="c1">// There is no distinction between integers and doubles, and no way to convert between them</span>
 </pre></div>
 </div>
 </div>
-<input id="87c46c76-a9c2-48d0-8d77-5e7240de5950" name="39add925-be53-4c85-baaf-1bcf9d428ac4" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-c" for="87c46c76-a9c2-48d0-8d77-5e7240de5950">
+<input id="sd-tab-item-28" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-c" for="sd-tab-item-28">
 C</label><div class="sd-tab-content docutils">
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 
@@ -947,8 +895,8 @@ C</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="c7c0fa02-3d9c-4889-9189-d4ddace61d02" name="39add925-be53-4c85-baaf-1bcf9d428ac4" type="radio">
-</input><label class="sd-tab-label" data-sync-id="tabcode-c++" for="c7c0fa02-3d9c-4889-9189-d4ddace61d02">
+<input id="sd-tab-item-29" name="sd-tab-set-5" type="radio">
+</input><label class="sd-tab-label" data-sync-id="tabcode-c++" for="sd-tab-item-29">
 C++</label><div class="sd-tab-content docutils">
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;bits/stdc++.h&gt;</span>
@@ -986,7 +934,7 @@ C++</label><div class="sd-tab-content docutils">
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -994,53 +942,112 @@ C++</label><div class="sd-tab-content docutils">
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="printing.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><i class="fas fa-book fa-fw"></i> Printing and Comments</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="printing.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><i class="fas fa-book fa-fw"></i> Printing and Comments</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="if_statements.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="if_statements.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><i class="fas fa-book fa-fw"></i> If/Else Statements</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Hunter Schafer<br/>
-  
-      &copy; Copyright 2022.<br/>
-    <div class="extra_footer">
-      Have feedback or spotted a bug? Please make a <a href="https://github.com/cse12x/java-tutorial/issues">GitHub issue</a> or contact <a href="https://homes.cs.washington.edu/~hschafer/">Hunter Schafer</a>!
-    </div>
-</p>
-        </footer>
-    </div>
-    
-</div>
-
-
       </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment">Assignment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types">Types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expressions">Expressions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#casting">Casting</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Hunter Schafer
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  Have feedback or spotted a bug? Please make a <a href="https://github.com/cse12x/java-tutorial/issues">GitHub issue</a> or contact <a href="https://homes.cs.washington.edu/~hschafer/">Hunter Schafer</a>!
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
