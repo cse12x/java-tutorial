@@ -109,7 +109,7 @@ int main()
         }
     }
 
-  return 0;
+    return 0;
 }
 ```
 ````
@@ -388,3 +388,116 @@ There are some things to note about this program:
    * `nextBoolean()` to get the next token as a `boolean`
    * `nextLine()` get the whole line as a `String`
    * All of the equivalent `hasNextX()` methods such as `hasNext()` and `hasNextInt()`.
+
+## Writing to a File
+
+We use a `PrintStream` object to write output to a file.
+
+To create a `PrintStream` connected to a specific file, we can pass in the `File` object as a parameter upon initialization. If a file with the given name already exists, it will replace the contents with the new output. Otherwise, the `PrintStream` will automatically create the file for you.
+
+When using a `PrintStream`, the syntax is very similar to printing to the console. Instead of printing using `System.out` (a.k.a. the console), we are printing using the `PrintStream` object. Let's say we have a `PrintStream` object named `output`; instead of `System.out.println(...)`, we will say `output.println(...)`.
+
+Common `PrintStream` methods include:
+* `println(___)` to write text to the file followed by a newline.
+* `print(___)` to write text to the file without a newline afterwards.
+* `write(___)` to write a byte value to the file.
+
+````{tab-set-code}
+
+```{code-block} java
+public class FileWriting {
+    public static void main(String[] args) throws FileNotFoundException {
+        PrintStream output = new PrintStream(new File("poem.txt"));
+
+        output.println("she sells sea shells");
+        output.println("by the sea shore");
+        for (int i = 1; i <= 5; i++) {
+            output.print(i);
+        }
+    }
+}
+```
+
+```{code-block} python
+def main():
+    f = open("poem.txt", "w")
+    f.write("she sells sea shells\nby the sea shore\n")
+    for i in range(1, 6):
+        f.write(i)
+    f.close()
+
+if __name__ == "__main__":
+    main()
+```
+
+```{code-block} javascript
+// File I/O is not allowed natively on Javascript
+// The following code is written for node.js
+
+var fs = require('fs');
+function main() {
+    let data = "she sells sea shells\nby the sea shore\n";
+    for (let i = 1; i <= 5; i++) {
+        data += i;
+    }
+    fs.writeFile("poem.txt", data, (err) => {
+        if (err) throw err;
+    });
+}
+
+main()
+```
+
+```{code-block} c
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    const char *filename = "poem.txt";
+    FILE *input_file = fopen( filename, "w" );
+    int i;
+
+    fprintf( fptr, "she sells sea shells\nby the sea shore\n" );
+
+    for (i = 1; i <= 5; i++)
+    {
+        fprintf( fptr, "%d", i );
+    }
+
+    fclose( input_file );
+    return 0;
+}
+```
+
+```{code-block} c++
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    ofstream file;
+    int i;
+
+    file.open("poem.txt");
+    file << "she sells sea shells\nby the sea shore\n";
+    for (i = 1; i <= 5; i++) {
+        file << i;
+    }
+
+    file.close();
+    return 0;
+}
+```
+````
+
+This code yield the following output to a file named `poem.txt`.
+
+```text
+she sells sea shells
+by the sea shore
+12345
+```
