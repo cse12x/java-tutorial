@@ -12,7 +12,7 @@ Much like how you would access a specific element in an array using square brack
 [15, 16, 17, 18, 19],
 [20, 21, 22, 23, 24]]
 ```
-Notice there is an extra pair of opening and closing brackets, which represents the array that stores all of the other arrays. The syntax is commonly represented as array[row][col] as seen visually as well. Additionally, the call to an array using the syntax array[1] would still function, only instead of providing a primative type, it would instead provide the array stored at that index of the array of arrays.
+Notice there is an extra pair of opening and closing brackets, which represents the array that stores all of the other arrays. The syntax is commonly represented as array[row][col] and is represented visually as so above for clarity. Additionally, the call to an array using the syntax array[1] would still function, only instead of providing a primative type, it would instead provide the array stored at that index of the array of arrays.
 
 ````{tab-set-code}
 
@@ -87,12 +87,7 @@ std::cout << std::endl;
 ```
 ````
 
-Similarily, if we want to change the value at (3,4) of the 2D array to 1, where 3 is the "x" coordinate or outside array and 4 is the "y" or inner array we would do something like array[3][4] = 1.
-
-Two important notes about arrays in Java:
-maybe add some things that are unique to 2D arrays and things like that??
-* maybe how the array will only be of one type even tho there are two arrays
-
+Similarily, if we want to change the value at (3,4) of the 2D array to 1, where 3 is the "x" coordinate or outside array and 4 is the "y" or inner array we would do something like array[3][4] = 1. Note that the 2D array can only be of one type, just like how a 1D array is only one type.
 
 ## Looping over 2D Arrays
 
