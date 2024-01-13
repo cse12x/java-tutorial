@@ -146,4 +146,4 @@ System.out.println(n);  // Out of scope: No longer defined
 
 Note how the variable `n` is only defined after its declaration but only until the body of the for loop continues. Outside of the loop, `n` can no longer be referenced since it is out of scope.
 
-One variable to not in particular is the loop variable `i` in the example above. `i`'s scope is limited to the for loop body and the for loop "header" (the initialization, condition, and update). This means you can refer to `i` in any of those parts, but not outside the loop.
+One variable to note in particular is the loop variable `i` in the example above. `i`'s scope is limited to the for loop body and the for loop "header" (the initialization, condition, and update). This means you can refer to `i` in any of those parts, but not outside the loop.
