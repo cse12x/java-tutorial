@@ -7,5 +7,5 @@ chapters:
   - file: loops
   - file: strings
   - file: methods
-  - file: io_files
   - file: arrays
+  - file: 2darrays
