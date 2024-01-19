@@ -4,6 +4,8 @@
 
 A 2D or "two-dimensional" array is very similar to the arrays that we talked about in the previous section, but instead of elements of types like `int`, `double`, `String`, etc, its element type is _array_. In other words, a 2D array is an array where each element is a reference to _another_ array. This type of data structure is helpful for representing many different kinds of scenarios, such as in applications using images, graphs, and tables. 
 
+A grid is typically represeted using columns and rows, where columns are all the elements of a vertical line of the grid and a row is all of the elements on a horizontal line of a grid. The same logic applies to a 2D array where a commonly used reprensetation to describe the arrays is that the outer array's indexes are the rows of the grid, and the inner arrays indexes are the columns. This can be seen in the 2D array representation below.
+
 You can access elements of a 2D array using square brackets `[]`, in the same way that we accessed elements of 1D arrays in the previous section. However, remember that the elements of a 2D array are arrays! If you want to get one of _those_ arrays' elements, you'll need to use two sets of square brackets `[][]`. For example, if you were dealing with a 2D array of integers `arr`, the type of the 2D array would be `int[][]` and you could access an individual `int` from the 2D array with `arr[_i_][_j_]` where `i` and `j` are the row and column index of the element we wanted. 
 ```
 [[0 , 1 , 2 , 3 , 4],
@@ -12,7 +14,6 @@ You can access elements of a 2D array using square brackets `[]`, in the same wa
 [15, 16, 17, 18, 19],
 [20, 21, 22, 23, 24]]
 ```
-Notice there is an extra pair of opening and closing brackets, which represents the array that stores all of the other arrays. The syntax is commonly represented as array[row][col] and is represented visually as so above for clarity. Additionally, the call to an array using the syntax array[1] would still function, only instead of providing a primative type, it would instead provide the array stored at that index of the array of arrays.
 
 ````{tab-set-code}
 
@@ -165,7 +166,6 @@ Recall that we would get a nicely-formatted String representation of a 1D array 
 int[][] array = new int[5][5];
 array[1][2] = 1;
 array[1][3] = 14;
-array[3][4] = array[1][2];
 array[4][4] = 5;
 
 for (int i = 0; i < array.length; i++) {
@@ -174,49 +174,59 @@ for (int i = 0; i < array.length; i++) {
 ```
 
 ```{code-block} python
-array = [0] * 3  # Short-hand to make a length 3 list
-array[0] = 8
-array[1] = 1
-array[2] = 7
+array = [[0] * 5 for _ in range(5)]
 
-print(array)
-// Output: [8, 1, 7]
+array[1][2] = 1
+array[1][3] = 14
+array[4][4] = 5
+
+for row in array:
+    print(row)
 ```
 
 ```{code-block} javascript
-let array = [[], [], [], []];
+let array = new Array(5).fill().map(() => new Array(5).fill(0));
 
+array[1][2] = 4;
+array[1][3] = 14;
+array[4][4] = 5;
 
 console.log(array);
-// Output: [8, 1, 7]
 ```
 
 ```{code-block} c
-int array[3];
-array[0] = 8;
-array[1] = 1;
-array[2] = 7;
+int array[5][5];
+
+array[1][2] = 4;
+array[1][3] = 14;
+array[4][4] = 5;
 
 printf("[");
-for (int i = 0; i < 3; i++) {
-    printf("%d, ", array[i]);
+for (int i = 0; i < 5; i++) {
+    printf("[");
+    for (int j = 0; j < 5; j++){
+        printf("%d, ", array[i][j]);
+    }
+    printf("]\n");
 }
-printf("]\n");
-// Output: [8, 1, 7]
+printf("]");
 ```
 
 ```{code-block} c++
-int array[3];
-array[0] = 8;
-array[1] = 1;
-array[2] = 7;
+int array[5][5];
+array[1][2] = 4;
+array[1][3] = 14;
+array[4][4] = 5;
 
 std::cout << "[";
-for (int i = 0; i < 3; i++) {
-    cout << array[i] << ", ";
+for (int i = 0; i < 5; i++) {
+    std::cout << "[";
+    for (int j = 0; j < 5; j++){
+        std::cout << array[i][j] << ", ";
+    }
+    std::cout << "]" << std::endl;
 }
-std::cout << "]" << endl;
-// Output: [8, 1, 7]
+std::cout << "]" << std::endl;
 ```
 ````
 
