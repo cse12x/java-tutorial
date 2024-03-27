@@ -4,5 +4,9 @@ __pycache__
 
 # Ignore build output
 book_source/source/_build
+
+# Other files
+.DS_Store
+
 # On the main branch, don't include the docs folder
 docs

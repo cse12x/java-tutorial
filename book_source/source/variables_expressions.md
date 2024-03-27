@@ -1,7 +1,7 @@
 # <i class="fas fa-book fa-fw"></i> Variables, Types, Expressions
 
 ## Variables
-Every variable and Java must be declared with a **type** to indicate which type of data will be stored in that variable. For example, the following program makes a variable called `x` and another variable called `y` and prints them out. Note that you have to specify when declaring the variable `x` that it will store an integer number (`int`).
+Every variable in Java must be declared with a **type** to indicate which type of data will be stored in that variable. For example, the following program makes a variable called `x` and another variable called `y` and prints them out. Note that you have to specify when declaring the variable `x` that it will store an integer number (`int`).
 
 ````{tab-set-code}
 
