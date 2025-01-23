@@ -290,7 +290,7 @@ Java has no operator for exponentiation (e.g., $3^2$). Instead, you have to use 
 public class Expressions {
     public static void main(String[] args) {
         int x = 3;
-        int y = Math.pow(x, 2);
+        double y = Math.pow(x, 2);
     }
 }
 ```
