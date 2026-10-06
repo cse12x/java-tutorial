@@ -187,7 +187,7 @@ for row in array:
 ```{code-block} javascript
 let array = new Array(5).fill().map(() => new Array(5).fill(0));
 
-array[1][2] = 4;
+array[1][2] = 1;
 array[1][3] = 14;
 array[4][4] = 5;
 
@@ -197,7 +197,7 @@ console.log(array);
 ```{code-block} c
 int array[5][5];
 
-array[1][2] = 4;
+array[1][2] = 1;
 array[1][3] = 14;
 array[4][4] = 5;
 
@@ -214,7 +214,7 @@ printf("]");
 
 ```{code-block} c++
 int array[5][5];
-array[1][2] = 4;
+array[1][2] = 1;
 array[1][3] = 14;
 array[4][4] = 5;
 
@@ -236,6 +236,6 @@ This code yield the following output.
 [0, 0, 0, 0, 0]
 [0, 0, 1, 14, 0]
 [0, 0, 0, 0, 0]
-[0, 0, 0, 0, 1]
+[0, 0, 0, 0, 0]
 [0, 0, 0, 0, 5]
 ```
