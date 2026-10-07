@@ -5,71 +5,71 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: lt\n"
+"Language: hu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "By the"
-msgstr "Prie"
+msgstr "Szerző:"
 
 msgid "By"
-msgstr "Iki"
+msgstr "Szerző:"
 
 msgid "Contents"
-msgstr "Turinys"
+msgstr "Tartalom"
 
 msgid "Copyright"
-msgstr "Autorių teisės"
+msgstr "Szerzői jog"
 
 msgid "Download notebook file"
-msgstr "Atsisiųsti nešiojamojo kompiuterio failą"
+msgstr "Jegyzettömbfájl letöltése"
 
 msgid "Download source file"
-msgstr "Atsisiųsti šaltinio failą"
+msgstr "Forrásfájl letöltése"
 
 msgid "Download this page"
-msgstr "Atsisiųskite šį puslapį"
+msgstr "Az oldal letöltése"
 
 msgid "Edit this page"
-msgstr "Redaguoti šį puslapį"
+msgstr "Az oldal szerkesztése"
 
 msgid "Fullscreen mode"
-msgstr "Pilno ekrano režimas"
+msgstr "Teljes képernyős mód"
 
 msgid "Last updated on"
-msgstr "Paskutinį kartą atnaujinta"
+msgstr "Utoljára frissítve:"
 
 msgid "Launch"
-msgstr "Paleiskite"
+msgstr "Indítás"
 
 msgid "Open an issue"
-msgstr "Atidarykite problemą"
+msgstr "Problémajegy nyitása"
 
 msgid "Print to PDF"
-msgstr "Spausdinti į PDF"
+msgstr "Nyomtatás PDF-be"
 
 msgid "Source repository"
-msgstr "Šaltinio saugykla"
+msgstr "Forráskódtároló"
 
 msgid "Sphinx Book Theme"
-msgstr "Sfinkso knygos tema"
+msgstr "Sphinx könyvsablon"
 
 msgid "Theme by the"
-msgstr "Tema"
+msgstr "Téma készítője:"
 
 msgid "Toggle navigation"
-msgstr "Perjungti naršymą"
+msgstr "Navigáció ki- és bekapcsolása"
 
 msgid "next page"
-msgstr "Kitas puslapis"
+msgstr "következő oldal"
 
 msgid "open issue"
-msgstr "atviras klausimas"
+msgstr "problémajegy nyitása"
 
 msgid "previous page"
-msgstr "Ankstesnis puslapis"
+msgstr "előző oldal"
 
 msgid "repository"
-msgstr "saugykla"
+msgstr "tároló"
 
 msgid "suggest edit"
-msgstr "pasiūlyti redaguoti"
+msgstr "szerkesztési javaslat"
